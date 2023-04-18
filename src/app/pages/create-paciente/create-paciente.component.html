@@ -1,0 +1,49 @@
+<div class="fondo">
+  <h1 class="titulo">Crear paciente</h1>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <form #formulario="ngForm" (ngSubmit)="submitForm(formulario.value)">
+              <!-- CUI -->
+              <div class="form-group">
+                <label for="cui">CUI</label>
+                <input type="text" class="form-control" id="cui" name="cui" [(ngModel)]="paciente.cui" required>
+              </div>
+              <!-- Nombre -->
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="paciente.nombre" required>
+              </div>
+              <!-- Apellidos -->
+              <div class="form-group">
+                <label for="apellidos">Apellidos</label>
+                <input type="text" class="form-control" id="apellidos" name="apellidos" [(ngModel)]="paciente.apellidos" required>
+              </div>
+              <!-- Dirección -->
+              <div class="form-group">
+                <label for="direccion">Dirección</label>
+                <input type="text" class="form-control" id="direccion" name="direccion" [(ngModel)]="paciente.direccion" required>
+              </div>
+              <!-- Teléfono -->
+              <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" name="telefono" [(ngModel)]="paciente.telefono" required>
+              </div>
+              <!-- Centro médico -->
+              <div class="form-group">
+                <label for="centroMedico">Centro médico</label>
+                <select class="form-control" id="centroMedico" name="centroMedico" [(ngModel)]="paciente.centroMedico" required>
+                  <option *ngFor="let centro of centrosMedicos" [value]="centro">{{centro}}</option>
+                </select>
+              </div>
+              <!-- Botón de enviar -->
+              <button type="submit" class="btn btn-primary btn-block">Crear Paciente</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

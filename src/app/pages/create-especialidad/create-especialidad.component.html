@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">Crear Especialidad</div>
+          <div class="card-body">
+            <form #formulario="ngForm" (ngSubmit)="submitForm(formulario.value)">
+              <!-- Nombre -->
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+              </div>
+              <!-- Botón de enviar -->
+              <button type="submit" class="btn btn-primary btn-block">Crear especialidad</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
