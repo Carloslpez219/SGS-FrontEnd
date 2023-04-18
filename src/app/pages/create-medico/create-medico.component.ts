@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-create-medico',
@@ -24,9 +25,25 @@ export class CreateMedicoComponent {
   centrosMedicos = ['Centro Médico A', 'Centro Médico B', 'Centro Médico C'];
   especialidades = ['1', '2', '3'];
 
+  constructor(private userService: UserService) { }
+
   submitForm(formulario: NgForm) {
-    console.log(formulario.value);
-    // Aquí podrías enviar los datos del formulario al servidor
+    const params = {
+      cui: this.medico.cui,
+      nombre: this.medico.nombre,
+      apellidos: this.medico.apellidos,
+      direccion: this.medico.direccion,
+      telefono: this.medico.telefono,
+      id_centro_medico: this.medico.centroMedico,
+      no_colegiado: this.medico.no_colegiado,
+      id_especialidad: this.medico.especialidad,
+      usuario: this.medico.usuario,
+      clave: this.medico.clave
+    };
+    
+    this.userService.createMedico(params).subscribe((resp: any)=>{
+      console.log(resp);
+    });
   }
 
 }
