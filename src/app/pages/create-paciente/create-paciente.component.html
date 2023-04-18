@@ -38,6 +38,13 @@
                   <option *ngFor="let centro of centrosMedicos" [value]="centro">{{centro}}</option>
                 </select>
               </div>
+              <!-- estado -->
+              <div class="form-group">
+                <label for="estado">Estado</label>
+                <select class="form-control" id="estado" name="estado" [(ngModel)]="paciente.estado" required>
+                  <option *ngFor="let estado of estados" [value]="estado">{{estado}}</option>
+                </select>
+              </div>
               <!-- Botón de enviar -->
               <button type="submit" class="btn btn-primary btn-block">Crear Paciente</button>
             </form>
