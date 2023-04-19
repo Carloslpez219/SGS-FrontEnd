@@ -56,7 +56,8 @@ export class CreateMedicoComponent {
     });
   }
 
-  getMunicipios(){
+  getMunicipios(event:any){
+    console.log(event)
     const params = {
       id_departamento: this.medico.departamento
     };
