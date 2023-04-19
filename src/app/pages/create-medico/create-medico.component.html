@@ -14,7 +14,7 @@
         <input type="text" id="direccion" name="direccion" class="form-control" [(ngModel)]="medico.direccion" required>
         <label for="centro_medico">Departamentos:</label>
           <div class="form-group">
-            <select class="form-control" id="departamento" name="departamento" [(ngModel)]="medico.departamento" required (click)="getMunicipios()">
+            <select class="form-control" id="departamento" name="departamento" [(ngModel)]="medico.departamento" required (change)="getMunicipios($event)">
               <option *ngFor="let departamento of departamentos" [value]="departamento.id_departamento">{{departamento.nombre}}</option>
             </select>
           </div>
