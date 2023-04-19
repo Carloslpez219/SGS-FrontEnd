@@ -26,9 +26,9 @@ export class LoginComponent {
 
     this.userService.login(params).subscribe(async (res: any)=>{
       if(res.message === undefined){
-        await this.navigateToRegister();
+        this.navigateToRegister();
       }else{
-        
+        console.log(res.message);
       }
     });
   }
