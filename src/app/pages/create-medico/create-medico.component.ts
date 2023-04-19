@@ -33,12 +33,6 @@ export class CreateMedicoComponent {
     this.userService.getDepartamentos().subscribe((resp)=>{
       this.departamentos = resp;
     });
-    const params = {
-      id_departamento: this.medico.departamento
-    };
-    this.userService.getMunicipios(params).subscribe((resp: any)=>{
-      this.municipios = resp;
-    });
   }
 
   submitForm(formulario: NgForm) {
@@ -59,6 +53,15 @@ export class CreateMedicoComponent {
     
     this.userService.createMedico(params).subscribe((resp: any)=>{
       console.log(resp);
+    });
+  }
+
+  getMunicipios(){
+    const params = {
+      id_departamento: this.medico.departamento
+    };
+    this.userService.getMunicipios(params).subscribe((resp: any)=>{
+      this.municipios = resp;
     });
   }
 
