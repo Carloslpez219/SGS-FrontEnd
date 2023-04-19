@@ -47,6 +47,8 @@ export class CreateMedicoComponent {
       nombre: this.medico.nombre,
       apellidos: this.medico.apellidos,
       direccion: this.medico.direccion,
+      municipio: this.medico.municipio,
+      departartamento: this.medico.departamento,
       telefono: this.medico.telefono,
       id_centro_medico: this.medico.centroMedico,
       no_colegiado: this.medico.no_colegiado,
