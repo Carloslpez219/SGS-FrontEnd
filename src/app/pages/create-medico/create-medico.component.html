@@ -29,7 +29,7 @@
         <label for="centro_medico">Centro Médico:</label>
         <div class="form-group">
             <select class="form-control" id="centroMedico" name="centroMedico" [(ngModel)]="medico.centroMedico" required>
-              <option *ngFor="let centro of centrosMedicos" [value]="centro">{{centro}}</option>
+              <option *ngFor="let centro of centrosMedicos" [value]="centro.id_centro_medico">{{centro.nombre}}</option>
             </select>
           </div>
         <label for="no_colegiado">No. Colegiado:</label>
@@ -37,7 +37,7 @@
         <label for="especialidad">Especialidad:</label>
         <div class="form-group">
             <select class="form-control" id="especialidad" name="especialidad" [(ngModel)]="medico.especialidad" required>
-              <option *ngFor="let especialidad of especialidades" [value]="especialidad">{{especialidad}}</option>
+              <option *ngFor="let especialidad of especialidades" [value]="especialidad.id_especialidad">{{especialidad.nombre}}</option>
             </select>
           </div>
         <label for="usuario">Usuario:</label>

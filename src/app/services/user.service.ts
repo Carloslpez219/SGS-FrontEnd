@@ -69,4 +69,12 @@ export class UserService {
     return this.http.post(this.url + '/getMunicipios', body,{headers});
   }
 
+  getEspecialidades(){
+    return this.http.get(this.url + '/getEspecialidades');
+  }
+
+  getCentrosMedicos(){
+    return this.http.get(this.url + '/getCentrosMedicos');
+  }
+
 }

@@ -24,14 +24,20 @@ export class CreateMedicoComponent {
     clave: ''
   };
 
-  centrosMedicos = ['Centro Médico A', 'Centro Médico B', 'Centro Médico C'];
-  especialidades = ['1', '2', '3'];
+  centrosMedicos: any;
+  especialidades: any;
   departamentos: any;
   municipios: any;
 
   constructor(private userService: UserService) { 
     this.userService.getDepartamentos().subscribe((resp)=>{
       this.departamentos = resp;
+    });
+    this.userService.getEspecialidades().subscribe((resp)=>{
+      this.especialidades = resp;
+    });
+    this.userService.getCentrosMedicos().subscribe((resp)=>{
+      this.centrosMedicos = resp;
     });
   }
 

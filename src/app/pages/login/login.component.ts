@@ -15,7 +15,11 @@ export class LoginComponent {
   constructor(private userService: UserService, private router: Router) { }
 
   navigateToRegister() {
-    this.router.navigate(['/createMedico']);
+    this.router.navigate(['/home']);
+  }
+
+  navigateToHome() {
+    this.router.navigate(['/home']);
   }
 
   async login(){
@@ -24,6 +28,7 @@ export class LoginComponent {
       clave: this.pass
     };
 
+<<<<<<< Updated upstream
     this.userService.login(params).subscribe(async (res: any)=>{
       if(res.message === undefined){
         alert('Bienvenido '+res[0].usuario);
@@ -32,6 +37,9 @@ export class LoginComponent {
         alert(res.message);
       }
     });
+=======
+    this.navigateToRegister();
+>>>>>>> Stashed changes
   }
 
 }
