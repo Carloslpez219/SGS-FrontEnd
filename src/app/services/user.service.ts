@@ -77,4 +77,8 @@ export class UserService {
     return this.http.get(this.url + '/getCentrosMedicos');
   }
 
+  getEstados(){
+    return this.http.get(this.url + '/getEstados');
+  }
+
 }
