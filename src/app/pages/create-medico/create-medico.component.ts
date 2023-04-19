@@ -47,8 +47,7 @@ export class CreateMedicoComponent {
       nombre: this.medico.nombre,
       apellidos: this.medico.apellidos,
       direccion: this.medico.direccion,
-      municipio: this.medico.municipio,
-      departartamento: this.medico.departamento,
+      id_municipio: this.medico.municipio,
       telefono: this.medico.telefono,
       id_centro_medico: this.medico.centroMedico,
       no_colegiado: this.medico.no_colegiado,
@@ -56,6 +55,8 @@ export class CreateMedicoComponent {
       usuario: this.medico.usuario,
       clave: this.medico.clave
     };
+
+    console.log(params);
     
     this.userService.createMedico(params).subscribe((resp: any)=>{
       console.log(resp);
