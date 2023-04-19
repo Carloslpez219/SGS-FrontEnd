@@ -1,56 +1,45 @@
 <div class="fondo">
-  <h1 class="titulo">Crear paciente</h1>
+  <h1 class="titulo">Registro Paciente</h1>
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <div class="card">
-          <div class="card-body">
-            <form #formulario="ngForm" (ngSubmit)="submitForm(formulario.value)">
-              <!-- CUI -->
-              <div class="form-group">
-                <label for="cui">CUI</label>
-                <input type="text" class="form-control" id="cui" name="cui" [(ngModel)]="paciente.cui" required>
-              </div>
-              <!-- Nombre -->
-              <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="paciente.nombre" required>
-              </div>
-              <!-- Apellidos -->
-              <div class="form-group">
-                <label for="apellidos">Apellidos</label>
-                <input type="text" class="form-control" id="apellidos" name="apellidos" [(ngModel)]="paciente.apellidos" required>
-              </div>
-              <!-- Dirección -->
-              <div class="form-group">
-                <label for="direccion">Dirección</label>
-                <input type="text" class="form-control" id="direccion" name="direccion" [(ngModel)]="paciente.direccion" required>
-              </div>
-              <!-- Teléfono -->
-              <div class="form-group">
-                <label for="telefono">Teléfono</label>
-                <input type="tel" class="form-control" id="telefono" name="telefono" [(ngModel)]="paciente.telefono" required>
-              </div>
-              <!-- Centro médico -->
-              <div class="form-group">
-                <label for="centroMedico">Centro médico</label>
-                <select class="form-control" id="centroMedico" name="centroMedico" [(ngModel)]="paciente.centroMedico" required>
-                  <option *ngFor="let centro of centrosMedicos" [value]="centro">{{centro}}</option>
-                </select>
-              </div>
-              <!-- estado -->
-              <div class="form-group">
-                <label for="estado">Estado</label>
-                <select class="form-control" id="estado" name="estado" [(ngModel)]="paciente.estado" required>
-                  <option *ngFor="let estado of estados" [value]="estado">{{estado}}</option>
-                </select>
-              </div>
-              <!-- Botón de enviar -->
-              <button type="submit" class="btn btn-primary btn-block">Crear Paciente</button>
-            </form>
+    <div class="card">
+      <form #formulario="ngForm" (ngSubmit)="submitForm(formulario.value)">
+        <label for="cui">CUI:</label>
+        <input type="text" id="cui" name="cui" class="form-control" [(ngModel)]="paciente.cui" required>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" class="form-control" [(ngModel)]="paciente.nombre" required>
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" class="form-control" [(ngModel)]="paciente.apellidos" required>
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" class="form-control" [(ngModel)]="paciente.direccion" required>
+        <label for="departamento">Departamentos:</label>
+          <div class="form-group">
+            <select class="form-control" id="departamento" name="departamento" [(ngModel)]="paciente.departamento" required (change)="getMunicipios($event)">
+              <option *ngFor="let departamento of departamentos" [value]="departamento.id_departamento">{{departamento.nombre}}</option>
+            </select>
           </div>
-        </div>
-      </div>
+          <label for="municipio">Municipios:</label>
+          <div class="form-group">
+              <select class="form-control" id="municipio" name="municipio" [(ngModel)]="paciente.municipio" required>
+                <option *ngFor="let municipio of municipios" [value]="municipio.id_municipio">{{municipio.nombre}}</option>
+              </select>
+            </div>
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" class="form-control" [(ngModel)]="paciente.telefono" required>
+        <label for="centro_medico">Centro Médico:</label>
+        <div class="form-group">
+            <select class="form-control" id="centroMedico" name="centroMedico" [(ngModel)]="paciente.centroMedico" required>
+              <option *ngFor="let centro of centrosMedicos" [value]="centro.id_centro_medico">{{centro.nombre}}</option>
+            </select>
+          </div>
+        
+        <label for="estado">Estado:</label>
+        <div class="form-group">
+            <select class="form-control" id="estado" name="estado" [(ngModel)]="paciente.estado" required>
+              <option *ngFor="let estado of estados" [value]="estado.id_estado">{{estado.descripcion}}</option>
+            </select>
+          </div>
+        <input type="submit" value="Registrarse" class="btn-primary">
+      </form>
     </div>
   </div>
-</div>
+</div>  
