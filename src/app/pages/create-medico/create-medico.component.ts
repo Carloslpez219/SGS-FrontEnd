@@ -13,6 +13,8 @@ export class CreateMedicoComponent {
     cui: '',
     nombre: '',
     apellidos: '',
+    departamento: '',
+    municipio: '',
     direccion: '',
     telefono: '',
     centroMedico: '',
@@ -24,8 +26,20 @@ export class CreateMedicoComponent {
 
   centrosMedicos = ['Centro Médico A', 'Centro Médico B', 'Centro Médico C'];
   especialidades = ['1', '2', '3'];
+  departamentos: any;
+  municipios: any;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService) { 
+    this.userService.getDepartamentos().subscribe((resp)=>{
+      this.departamentos = resp;
+    });
+    const params = {
+      id_departamento: this.medico.departamento
+    };
+    this.userService.getMunicipios(params).subscribe((resp: any)=>{
+      this.municipios = resp;
+    });
+  }
 
   submitForm(formulario: NgForm) {
     const params = {

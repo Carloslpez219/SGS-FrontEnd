@@ -57,4 +57,16 @@ export class UserService {
     return this.http.post(this.url + '/createMedico', body,{headers});
   }
 
+  getDepartamentos(){
+    return this.http.get(this.url + '/getDepartamentos');
+  }
+
+  getMunicipios(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/getMunicipios', body,{headers});
+  }
+
 }
