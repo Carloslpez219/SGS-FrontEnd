@@ -18,6 +18,10 @@ export class LoginComponent {
     this.router.navigate(['/createMedico']);
   }
 
+  navigateToHome() {
+    this.router.navigate(['/home']);
+  }
+
   async login(){
     const params = {
       usuario: this.user,
@@ -26,9 +30,10 @@ export class LoginComponent {
 
     this.userService.login(params).subscribe(async (res: any)=>{
       if(res.message === undefined){
-        this.navigateToRegister();
+        alert('Bievenido '+res[0].usuario);
+        this.navigateToHome();
       }else{
-        console.log(res.message);
+        alert(res.message);
       }
     });
   }
