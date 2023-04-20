@@ -18,6 +18,10 @@ export class LoginComponent {
     this.router.navigate(['/createPaciente']);
   }
 
+  navigateToHome() {
+    this.router.navigate(['/home']);
+  }
+
   async login(){
     const params = {
       usuario: this.user,
