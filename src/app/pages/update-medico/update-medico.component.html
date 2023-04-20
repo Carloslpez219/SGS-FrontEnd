@@ -1,0 +1,43 @@
+<div class="fondo">
+    <h1 class="titulo">Actualizar Medico</h1>
+    <div class="container" *ngIf="validacion_usuario">
+      <div class="card">
+        <form #formulario="ngForm" (ngSubmit)="submitForm(formulario.value)">
+          <label for="cui">CUI:</label>
+          <input type="text" id="cui" name="cui" class="form-control" [(ngModel)]="medico.cui" required disabled="true">
+          <label for="no_colegiado">No. colegiado:</label>
+          <input type="text" id="no_colegiado" name="no_colegiado" class="form-control" [(ngModel)]="medico.colegiado" required disabled="true">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" class="form-control" [(ngModel)]="medico.nombre" required>
+          <label for="apellidos">Apellidos:</label>
+          <input type="text" id="apellidos" name="apellidos" class="form-control" [(ngModel)]="medico.apellidos" required>
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono" class="form-control" [(ngModel)]="medico.telefono" required>
+          <label for="centro_medico">Centro Médico:</label>
+          <div class="form-group">
+              <select class="form-control" id="centroMedico" name="centroMedico" [(ngModel)]="medico.centroMedico" required>
+                <option *ngFor="let centro of centrosMedicos" [value]="centro.id_centro_medico">{{centro.nombre}}</option>
+              </select>
+            </div>
+          
+            <label for="especialidad_">Especialidad:</label>
+            <div class="form-group">
+                <select class="form-control" id="especialidad" name="especialidad" [(ngModel)]="medico.idEspecialidad" required>
+                  <option *ngFor="let esp of especialidades" [value]="esp.id_especialidad">{{esp.nombre}}</option>
+                </select>
+              </div>
+          <input type="submit" value="Actualizar" class="btn-primary">
+        </form>
+      </div>
+    </div>
+
+    <div class="container" *ngIf="!validacion_usuario">
+        <div class="card">
+          <form #formulario="ngForm" (ngSubmit)="submitForm_Request(formulario.value)">
+            <label for="cui">CUI de Medico a actualizar:</label>
+            <input type="text" id="cui" name="cui" class="form-control" [(ngModel)]="req.cui" required>
+            <input type="submit" value="Buscar" class="btn-primary">
+          </form>
+        </div>
+    </div>
+  </div>  

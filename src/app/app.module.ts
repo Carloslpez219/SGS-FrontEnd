@@ -12,6 +12,7 @@ import { CreatePacienteComponent } from './pages/create-paciente/create-paciente
 import { CreateMedicoComponent } from './pages/create-medico/create-medico.component';
 import { HistorialMedicoComponent } from './pages/historial-medico/historial-medico.component';
 import { UpdatePacienteComponent } from './pages/update-paciente/update-paciente.component';
+import { UpdateMedicoComponent } from './pages/update-medico/update-medico.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { UpdatePacienteComponent } from './pages/update-paciente/update-paciente
     CreatePacienteComponent,
     CreateMedicoComponent,
     UpdatePacienteComponent,
+    UpdateMedicoComponent,
     HistorialMedicoComponent
   ],
   imports: [

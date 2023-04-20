@@ -19,11 +19,14 @@ export class UpdatePacienteComponent {
     apellidos: '',
     telefono: '',
     centroMedico: '',
-    estado: ''
+    estado: '',
+    padre:'',
+    madre:''
   };
 
   centrosMedicos: any;
   estados: any;
+  posiblesPadres:any;
 
   validacion_usuario = false;
 
@@ -43,8 +46,12 @@ export class UpdatePacienteComponent {
       apellidos: this.paciente.apellidos,
       telefono: this.paciente.telefono,
       id_centro_medico: this.paciente.centroMedico,
-      id_estado: this.paciente.estado
+      id_estado: this.paciente.estado,
+      no_paciente_padre: this.paciente.padre,
+      no_paciente_madre: this.paciente.madre
     };
+
+    console.log(params);
     
     this.userService.updatePaciente(params).subscribe((resp: any)=>{
       alert(resp.message);
@@ -66,10 +73,17 @@ export class UpdatePacienteComponent {
           this.paciente.telefono = resp[0].telefono;
           this.paciente.centroMedico = resp[0].id_centro_medico;
           this.paciente.estado = resp[0].id_estado;
+          this.paciente.padre = resp[0].no_paciente_padre;
+          this.paciente.madre = resp[0].no_paciente_madre;
+
           this.validacion_usuario = true;
       }else{
         alert(resp.message);
       }
+    });
+
+    this.userService.getPosiblesPadres(params).subscribe((resp)=>{
+      this.posiblesPadres = resp;
     });
   }
 }
