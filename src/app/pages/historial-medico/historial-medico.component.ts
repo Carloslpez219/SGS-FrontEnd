@@ -50,7 +50,8 @@ export class HistorialMedicoComponent implements OnInit {
     };
 
     this.userService.getPaciente(params).subscribe(async (res: any)=>{
-      this.paciente = res;
+      this.paciente = res[0];
+      console.log(this.paciente.cui);
       this.getResumenExpediente();
     });
   }
@@ -61,6 +62,7 @@ export class HistorialMedicoComponent implements OnInit {
     };
 
     this.userService.getResumenExpediente(params).subscribe(async (res: any)=>{
+      console.log(res);
       this.registros = res;
       this.paso1 = false;
     });

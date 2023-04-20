@@ -31,7 +31,7 @@ export class LoginComponent {
     this.userService.login(params).subscribe(async (res: any)=>{
       if(res.message === undefined){
         alert('Bienvenido '+res[0].usuario);
-        this.navigateToRegister();
+        this.navigateToHome();
       }else{
         alert(res.message);
       }
