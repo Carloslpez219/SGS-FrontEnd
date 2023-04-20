@@ -77,3 +77,14 @@
   background-color: #ddd;
 }
 
+/*CSS*/
+
+.fondo{
+  width: 100%; 
+  height: 100%;
+  background-image: url('./../../../assets/img/blurred-abstract-background-interior-view-looking-out-toward-empty-office-lobby-entrance-doors-glass-curtain-wall-with-frame.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
