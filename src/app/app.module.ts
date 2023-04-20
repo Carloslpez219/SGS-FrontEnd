@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CreatePacienteComponent } from './pages/create-paciente/create-paciente.component';
 import { CreateMedicoComponent } from './pages/create-medico/create-medico.component';
 import { UpdatePacienteComponent } from './pages/update-paciente/update-paciente.component';
+import { UpdateMedicoComponent } from './pages/update-medico/update-medico.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { UpdatePacienteComponent } from './pages/update-paciente/update-paciente
     LoginComponent,
     CreatePacienteComponent,
     CreateMedicoComponent,
-    UpdatePacienteComponent
+    UpdatePacienteComponent,
+    UpdateMedicoComponent
   ],
   imports: [
     BrowserModule,

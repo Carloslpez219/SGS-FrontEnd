@@ -5,6 +5,7 @@ import { CreatePacienteComponent } from './pages/create-paciente/create-paciente
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { UpdatePacienteComponent } from './pages/update-paciente/update-paciente.component';
+import { UpdateMedicoComponent } from './pages/update-medico/update-medico.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'createPaciente', component: CreatePacienteComponent },
   { path: 'createMedico', component: CreateMedicoComponent },
-  { path: 'updatePaciente', component: UpdatePacienteComponent }
+  { path: 'updatePaciente', component: UpdatePacienteComponent },
+  { path: 'updateMedico', component: UpdateMedicoComponent }
 ];
 
 @NgModule({
