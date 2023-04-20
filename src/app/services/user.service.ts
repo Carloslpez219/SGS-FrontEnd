@@ -81,4 +81,20 @@ export class UserService {
     return this.http.get(this.url + '/getEstados');
   }
 
+  getPaciente(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/getPaciente', body,{headers});
+  }
+
+  updatePaciente(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.put(this.url + '/updatePaciente', body,{headers});
+  }
+
 }
