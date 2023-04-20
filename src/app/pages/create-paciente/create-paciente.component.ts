@@ -13,16 +13,30 @@ export class CreatePacienteComponent {
     cui: '',
     nombre: '',
     apellidos: '',
+    departamento: '',
+    municipio: '',
     direccion: '',
     telefono: '',
     centroMedico: '',
     estado: ''
   };
 
-  centrosMedicos = ['Centro Médico A', 'Centro Médico B', 'Centro Médico C'];
-  estados = ['1', '2', '3'];
+  centrosMedicos: any;
+  estados: any;
+  departamentos: any;
+  municipios: any;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService) { 
+    this.userService.getDepartamentos().subscribe((resp)=>{
+      this.departamentos = resp;
+    });
+    this.userService.getEstados().subscribe((resp)=>{
+      this.estados = resp;
+    });
+    this.userService.getCentrosMedicos().subscribe((resp)=>{
+      this.centrosMedicos = resp;
+    });
+  }
 
   submitForm(formulario: NgForm) {
     const params = {
@@ -30,13 +44,24 @@ export class CreatePacienteComponent {
       nombre: this.paciente.nombre,
       apellidos: this.paciente.apellidos,
       direccion: this.paciente.direccion,
+      id_municipio: this.paciente.municipio,
       telefono: this.paciente.telefono,
       id_centro_medico: this.paciente.centroMedico,
       id_estado: this.paciente.estado
     };
     
-    this.userService.createMedico(params).subscribe((resp: any)=>{
+    this.userService.createPaciente(params).subscribe((resp: any)=>{
       console.log(resp);
+    });
+  }
+
+  getMunicipios(event:any){
+    console.log(event)
+    const params = {
+      id_departamento: this.paciente.departamento
+    };
+    this.userService.getMunicipios(params).subscribe((resp: any)=>{
+      this.municipios = resp;
     });
   }
 }

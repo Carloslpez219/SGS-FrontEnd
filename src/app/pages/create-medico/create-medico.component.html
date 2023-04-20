@@ -1,6 +1,5 @@
-
 <div class="fondo">
-  <h1 class="titulo">Registro</h1>
+  <h1 class="titulo">Registro Medico</h1>
   <div class="container">
     <div class="card">
       <form #formulario="ngForm" (ngSubmit)="submitForm(formulario.value)">
@@ -12,13 +11,13 @@
         <input type="text" id="apellidos" name="apellidos" class="form-control" [(ngModel)]="medico.apellidos" required>
         <label for="direccion">Dirección:</label>
         <input type="text" id="direccion" name="direccion" class="form-control" [(ngModel)]="medico.direccion" required>
-        <label for="centro_medico">Departamentos:</label>
+        <label for="departamento">Departamentos:</label>
           <div class="form-group">
             <select class="form-control" id="departamento" name="departamento" [(ngModel)]="medico.departamento" required (change)="getMunicipios($event)">
               <option *ngFor="let departamento of departamentos" [value]="departamento.id_departamento">{{departamento.nombre}}</option>
             </select>
           </div>
-          <label for="centro_medico">Municipios:</label>
+          <label for="municipio">Municipios:</label>
           <div class="form-group">
               <select class="form-control" id="municipio" name="municipio" [(ngModel)]="medico.municipio" required>
                 <option *ngFor="let municipio of municipios" [value]="municipio.id_municipio">{{municipio.nombre}}</option>

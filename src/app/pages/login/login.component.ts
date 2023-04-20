@@ -15,7 +15,7 @@ export class LoginComponent {
   constructor(private userService: UserService, private router: Router) { }
 
   navigateToRegister() {
-    this.router.navigate(['/createMedico']);
+    this.router.navigate(['/createPaciente']);
   }
 
   async login(){
