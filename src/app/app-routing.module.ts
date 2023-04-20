@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CreateMedicoComponent } from './pages/create-medico/create-medico.component';
 import { CreatePacienteComponent } from './pages/create-paciente/create-paciente.component';
+import { HistorialMedicoComponent } from './pages/historial-medico/historial-medico.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { UpdatePacienteComponent } from './pages/update-paciente/update-paciente.component';
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'createPaciente', component: CreatePacienteComponent },
   { path: 'createMedico', component: CreateMedicoComponent },
   { path: 'updatePaciente', component: UpdatePacienteComponent },
-  { path: 'updateMedico', component: UpdateMedicoComponent }
+  { path: 'updateMedico', component: UpdateMedicoComponent },
+  { path: 'historial-medico', component: HistorialMedicoComponent },
 ];
 
 @NgModule({

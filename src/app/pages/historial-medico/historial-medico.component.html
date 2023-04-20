@@ -1,0 +1,47 @@
+<nav class="navbar">
+    <ul class="nav-list">
+      <li class="nav-item"><a href="#">Inicio</a></li>
+      <li class="nav-item"><a href="#">Cerrar sesión</a></li>
+    </ul>
+  </nav>
+
+
+  <h1 class="text-center mb-4" style="margin-top: 80px;" *ngIf="paso1">Buscar paciente</h1>
+
+  <div class="container" *ngIf="paso1">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Buscar...">
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="button">Buscar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+<div class="container mt-4" *ngIf="!paso1">
+    <h1 class="text-center mb-4">Historial Médico</h1>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let registro of registros">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{registro.fechaConsulta}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{registro.horaConsulta}}</h6>
+            <p class="card-text">IMC: {{registro.imc}}</p>
+            <p class="card-text">Altura: {{registro.altura}}</p>
+            <p class="card-text">Peso: {{registro.peso}}</p>
+            <p class="card-text">Médico Tratante: {{registro.medicoTratante}}</p>
+            <p class="card-text">Especialidad del Médico: {{registro.especialidadMedico}}</p>
+            <p class="card-text">Centro Médico: {{registro.centroMedico}}</p>
+            <p class="card-text">Evolución y Resultado del Tratamiento:</p>
+            <p class="card-text">{{registro.evolucionResultado}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

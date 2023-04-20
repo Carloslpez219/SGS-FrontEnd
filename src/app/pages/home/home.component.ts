@@ -14,4 +14,8 @@ export class HomeComponent {
     this.router.navigate(['/registro']);
   }
 
+  historialMedico(){
+    this.router.navigate(['/historial-medico']);
+  }
+
 }

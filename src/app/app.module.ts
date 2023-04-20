@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CreatePacienteComponent } from './pages/create-paciente/create-paciente.component';
 import { CreateMedicoComponent } from './pages/create-medico/create-medico.component';
+import { HistorialMedicoComponent } from './pages/historial-medico/historial-medico.component';
 import { UpdatePacienteComponent } from './pages/update-paciente/update-paciente.component';
 import { UpdateMedicoComponent } from './pages/update-medico/update-medico.component';
 
@@ -21,7 +22,8 @@ import { UpdateMedicoComponent } from './pages/update-medico/update-medico.compo
     CreatePacienteComponent,
     CreateMedicoComponent,
     UpdatePacienteComponent,
-    UpdateMedicoComponent
+    UpdateMedicoComponent,
+    HistorialMedicoComponent
   ],
   imports: [
     BrowserModule,
