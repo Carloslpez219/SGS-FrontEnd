@@ -89,4 +89,12 @@ export class UserService {
     return this.http.post(this.url + '/getPaciente', body,{headers});
   }
 
+  getResumenExpediente(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/getResumenExpediente', body,{headers});
+  }
+
 }
