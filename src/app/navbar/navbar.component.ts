@@ -83,6 +83,9 @@ export class NavbarComponent {
       case 'verReporteTop3Unidades':
         this.navigateToReporteMuertes();
         break;
+      case 'verReporteTop5Pacientes':
+        this.navigateToReportePacientes();
+        break;
       default:
         break;
     }
@@ -151,6 +154,10 @@ export class NavbarComponent {
 
   navigateToReporteUnidades() {
     this.router.navigate(['/reporteUnidades']);
+  }
+
+  navigateToReportePacientes() {
+    this.router.navigate(['/reportePacientes']);
   }
 
 }
