@@ -78,10 +78,10 @@ export class NavbarComponent {
         this.navigateToReporteMuertes();
         break;
       case 'verReporteTop10Medicos':
-        this.navigateToReporteMuertes();
+        this.navigateToReporteMedicos();
         break;
       case 'verReporteTop3Unidades':
-        this.navigateToReporteMuertes();
+        this.navigateToReporteUnidades();
         break;
       default:
         break;
