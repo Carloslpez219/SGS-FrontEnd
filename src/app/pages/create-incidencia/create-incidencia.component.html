@@ -5,9 +5,9 @@
         <form #formulario="ngForm" (ngSubmit)="submitForm(formulario.value)">
           <label for="imc">IMC:</label>
           <input type="text" id="imc" name="imc" class="form-control" [(ngModel)]="incidencia.imc" required>
-          <label for="altura">Altura:</label>
+          <label for="altura">Altura en CM:</label>
           <input type="text" id="altura" name="altura" class="form-control" [(ngModel)]="incidencia.altura" required>
-          <label for="peso">Peso:</label>
+          <label for="peso">Peso en LB:</label>
           <input type="text" id="peso" name="peso" class="form-control" [(ngModel)]="incidencia.peso" required>
           <label for="medico">Médico:</label>
           <div class="form-group">
