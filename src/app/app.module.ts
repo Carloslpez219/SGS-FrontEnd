@@ -31,6 +31,9 @@ import { InsertAdiccionComponent } from './pages/insert-adiccion/insert-adiccion
 import { InsertTratamientoComponent } from './pages/insert-tratamiento/insert-tratamiento.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ReporteMuertesComponent } from './pages/reporte-muertes/reporte-muertes.component';
+import { ReporteMedicosComponent } from './pages/reporte-medicos/reporte-medicos.component';
+import { ReportePacientesComponent } from './pages/reporte-pacientes/reporte-pacientes.component';
+import { ReporteUnidadesComponent } from './pages/reporte-unidades/reporte-unidades.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +63,10 @@ import { ReporteMuertesComponent } from './pages/reporte-muertes/reporte-muertes
     InsertAdiccionComponent,
     InsertTratamientoComponent,
     NavbarComponent,
-    ReporteMuertesComponent
+    ReporteMuertesComponent,
+    ReporteMedicosComponent,
+    ReportePacientesComponent,
+    ReporteUnidadesComponent
   ],
   imports: [
     BrowserModule,
