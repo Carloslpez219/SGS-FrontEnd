@@ -1,0 +1,19 @@
+<h1 class="text-center mb-4" style="margin-top: 80px;">Agregar Cirugia</h1>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="input-group">
+        <label for="cirugia">Cirugia:</label>
+        <div class="form-group">
+            <select class="form-control" id="cirugia" name="cirugia" [(ngModel)]="cirugia" required>
+              <option *ngFor="let cir of cirugias" [value]="cir.id_cirugia">{{cir.nombre}}</option>
+            </select>
+          </div>
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button" (click)="insertCirugia()">Agregar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

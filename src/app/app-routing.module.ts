@@ -13,6 +13,11 @@ import { InventarioMedicamentoComponent } from './pages/inventario-medicamento/i
 import { InsertInventarioMaterialesComponent } from './pages/insert-inventario-materiales/insert-inventario-materiales.component';
 import { DetalleIncidenciaComponent } from './pages/detalle-incidencia/detalle-incidencia.component';
 import { InventarioMaterialesComponent } from './pages/inventario-materiales/inventario-materiales.component';
+import { InsertEnfermedadComponent } from './pages/insert-enfermedad/insert-enfermedad.component';
+import { InsertExamenComponent } from './pages/insert-examen/insert-examen.component';
+import { InsertCirugiaComponent } from './pages/insert-cirugia/insert-cirugia.component';
+import { InsertAdiccionComponent } from './pages/insert-adiccion/insert-adiccion.component';
+import { InsertTratamientoComponent } from './pages/insert-tratamiento/insert-tratamiento.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -28,7 +33,12 @@ const routes: Routes = [
   { path: 'inventarioMedicamento', component: InventarioMedicamentoComponent },
   { path: 'insertInventarioMaterial', component: InsertInventarioMaterialesComponent },
   { path: 'detalleIncidencia', component: DetalleIncidenciaComponent },
-  { path: 'inventarioMateriales', component: InventarioMaterialesComponent }
+  { path: 'inventarioMateriales', component: InventarioMaterialesComponent },
+  { path: 'agregarEnfermedad', component: InsertEnfermedadComponent },
+  { path: 'agregarExamen', component: InsertExamenComponent },
+  { path: 'agregarCirugia', component: InsertCirugiaComponent },
+  { path: 'agregarAdiccion', component: InsertAdiccionComponent },
+  { path: 'agregarTratamiento', component: InsertTratamientoComponent }
 ];
 
 @NgModule({

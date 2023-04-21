@@ -20,6 +20,11 @@ import { InsertInventarioMedicamentoComponent } from './pages/insert-inventario-
 import { InventarioMedicamentoComponent } from './pages/inventario-medicamento/inventario-medicamento.component';
 import { InsertInventarioMaterialesComponent } from './pages/insert-inventario-materiales/insert-inventario-materiales.component';
 import { InventarioMaterialesComponent } from './pages/inventario-materiales/inventario-materiales.component';
+import { InsertEnfermedadComponent } from './pages/insert-enfermedad/insert-enfermedad.component';
+import { InsertExamenComponent } from './pages/insert-examen/insert-examen.component';
+import { InsertCirugiaComponent } from './pages/insert-cirugia/insert-cirugia.component';
+import { InsertAdiccionComponent } from './pages/insert-adiccion/insert-adiccion.component';
+import { InsertTratamientoComponent } from './pages/insert-tratamiento/insert-tratamiento.component';
 
 
 @NgModule({
@@ -39,7 +44,12 @@ import { InventarioMaterialesComponent } from './pages/inventario-materiales/inv
     InsertInventarioMedicamentoComponent,
     InventarioMedicamentoComponent,
     InsertInventarioMaterialesComponent,
-    InventarioMaterialesComponent
+    InventarioMaterialesComponent,
+    InsertEnfermedadComponent,
+    InsertExamenComponent,
+    InsertCirugiaComponent,
+    InsertAdiccionComponent,
+    InsertTratamientoComponent
   ],
   imports: [
     BrowserModule,
