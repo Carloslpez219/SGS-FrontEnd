@@ -10,10 +10,6 @@ export class HomeComponent {
 
   constructor(private router: Router) { }
 
-  navigateToRegister() {
-    this.router.navigate(['/registro']);
-  }
-
   historialMedico(){
     this.router.navigate(['/historial-medico']);
   }

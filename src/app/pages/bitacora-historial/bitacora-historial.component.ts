@@ -13,6 +13,7 @@ export class BitacoraHistorialComponent {
   constructor(private userService: UserService){
 
       this.userService.getBitacoraHistorial().subscribe(async (res: any)=>{
+        console.log(res);
         this.bitacoras = res;
       });
     }
