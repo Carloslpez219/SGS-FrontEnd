@@ -16,6 +16,8 @@ import { DetalleIncidenciaComponent } from './pages/detalle-incidencia/detalle-i
 import { InfoCardComponent } from './info-card/info-card.component';
 import { UpdateMedicoComponent } from './pages/update-medico/update-medico.component';
 import { CreateIncidenciaComponent } from './pages/create-incidencia/create-incidencia.component';
+import { BitacoraCardComponent } from './bitacora-card/bitacora-card.component';
+import { BitacoraHistorialComponent } from './pages/bitacora-historial/bitacora-historial.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { CreateIncidenciaComponent } from './pages/create-incidencia/create-inci
     InfoCardComponent,
     UpdateMedicoComponent,
     HistorialMedicoComponent,
-    CreateIncidenciaComponent
+    CreateIncidenciaComponent,
+    BitacoraCardComponent,
+    BitacoraHistorialComponent
   ],
   imports: [
     BrowserModule,

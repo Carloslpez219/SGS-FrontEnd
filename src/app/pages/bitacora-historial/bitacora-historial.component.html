@@ -1,0 +1,11 @@
+<div class="container">
+    <h1>Bitácora</h1>
+    <div class="row">
+      <div class="col-md-12">
+        <div *ngFor="let bitacora of bitacoras">
+          <app-bitacora-card [id]="bitacora.id_bitacora" [incidencia]="bitacora.id_incidencia" [fechaHora]="bitacora.fecha_hora" [accion]="bitacora.accion" [usuario]="bitacora.usuario"></app-bitacora-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  
