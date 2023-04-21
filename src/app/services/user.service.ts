@@ -297,4 +297,16 @@ export class UserService {
     return this.http.get(this.url + '/getTop10Enfermedades');
   }
 
+  getTop10Medicos(){
+    return this.http.get(this.url + '/getTop10Medicos');
+  }
+
+  getTop5Pacientes(){
+    return this.http.get(this.url + '/getTop5Pacientes');
+  }
+
+  getTop3Unidades(){
+    return this.http.get(this.url + '/getTop3Unidades');
+  }
+
 }

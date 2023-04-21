@@ -21,6 +21,9 @@ import { InsertTratamientoComponent } from './pages/insert-tratamiento/insert-tr
 import { BitacoraHistorialComponent } from './pages/bitacora-historial/bitacora-historial.component';
 import { BitacoraTraspasoComponent } from './pages/bitacora-traspaso/bitacora-traspaso.component';
 import { ReporteMuertesComponent } from './pages/reporte-muertes/reporte-muertes.component';
+import { ReporteMedicosComponent } from './pages/reporte-medicos/reporte-medicos.component';
+import { ReportePacientesComponent } from './pages/reporte-pacientes/reporte-pacientes.component';
+import { ReporteUnidadesComponent } from './pages/reporte-unidades/reporte-unidades.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -44,7 +47,10 @@ const routes: Routes = [
   { path: 'agregarTratamiento', component: InsertTratamientoComponent },
   { path: 'bitacoraHistorial', component: BitacoraHistorialComponent },
   { path: 'bitacoraTraspaso', component: BitacoraTraspasoComponent },
-  { path: 'reporteMuertes', component: ReporteMuertesComponent }
+  { path: 'reporteMuertes', component: ReporteMuertesComponent },
+  { path: 'reporteMedicos', component: ReporteMedicosComponent },
+  { path: 'reportePacientes', component: ReportePacientesComponent },
+  { path: 'reporteUnidades', component: ReporteUnidadesComponent }
 ];
 
 @NgModule({

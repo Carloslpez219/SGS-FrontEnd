@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <h1>Reporte de las unidades que mas pacientes atienden</h1>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card-deck">
+          <div class="card" *ngFor="let unidad of unidades">
+            <div class="card-body">
+              <h5 class="card-title">Nombre del centro medico: {{ unidad.nombre_enfermedad }}</h5>
+              <p class="card-text">Cantidad de pacientes atendidos: {{ unidad.cantidad }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
