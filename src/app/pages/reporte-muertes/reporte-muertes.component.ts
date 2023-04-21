@@ -12,7 +12,7 @@ export class ReporteMuertesComponent {
 
   constructor(private userService: UserService){
 
-    this.userService.getBitacoraTraspaso().subscribe(async (res: any)=>{
+    this.userService.getTop10Enfermedades().subscribe(async (res: any)=>{
       this.enfermedades = res;
     });
   }

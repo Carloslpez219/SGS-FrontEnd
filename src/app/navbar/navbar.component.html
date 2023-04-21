@@ -41,6 +41,14 @@
           <option value="registrarInventarioMateriales">Registrar en Inventario Materiales</option>
         </select>
       </li>
+
+      <li class="nav-item-group">
+        <label for="reporte">Reporte</label>
+        <select id="reporte" (change)="onReporteSelect($event)">
+          <option value="">Seleccionar opción</option>
+          <option value="verReporteTop10Enfermedades">Ver Reporte Top 10 Enfermedades Mortales</option>
+        </select>
+      </li>
   
       <li class="nav-item" (click)="navigateToLogin()">Cerrar sesión</li>
     </ul>
