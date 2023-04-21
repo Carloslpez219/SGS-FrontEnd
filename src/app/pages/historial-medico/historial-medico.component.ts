@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class HistorialMedicoComponent implements OnInit {
   paciente: any;
   validacion_usuario = true;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService,private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -26,7 +27,6 @@ export class HistorialMedicoComponent implements OnInit {
     this.userService.getPaciente(params).subscribe(async (res: any)=>{
       if(res.message === undefined){
         this.paciente = res[0];
-        console.log(this.paciente.cui);
         this.getResumenExpediente();
       }else{
         alert(res.message);
@@ -48,6 +48,7 @@ export class HistorialMedicoComponent implements OnInit {
 
   guardarIncidencia(registro: any){
     sessionStorage.setItem('incidencia', registro.id_incidencia);
+    this.router.navigate(['/detalleIncidencia']);
   }
 
 }

@@ -1,0 +1,33 @@
+<div class="fondo">
+    <h1 class="titulo">Insercion en Inventario de Medicamentos</h1>
+    <div class="container">
+      <div class="card">
+        <form #formulario="ngForm" (ngSubmit)="submitForm(formulario.value)">
+            <label for="centro_medico">Centro Médico:</label>
+            <div class="form-group">
+                <select class="form-control" id="centroMedico" name="centroMedico" [(ngModel)]="insercion.centroMedico" required>
+                  <option *ngFor="let centro of centrosMedicos" [value]="centro.id_centro_medico">{{centro.nombre}}</option>
+                </select>
+              </div>
+            <label for="medicamento">Medicamento:</label>
+            <div class="form-group">
+                <select class="form-control" id="medicamento" name="medicamento" [(ngModel)]="insercion.medicamento" required>
+                  <option *ngFor="let med of medicamentos" [value]="med.id_medicina">{{med.nombre_medicamento}}</option>
+                </select>
+              </div>
+            
+              <label for="disponibilidad">Disponibilidad:</label>
+              <input type="text" id="disponibilidad" name="disponibilidad" class="form-control" [(ngModel)]="insercion.disponibilidad" required>
+            
+              <label for="fechaCaducidad">Fecha caducidad:</label>
+              <input type="text" id="fechaCaducidad" name="fechaCaducidad" class="form-control" [(ngModel)]="insercion.fechaCaducidad" required>
+              
+              <label for="capacidadMaxima">Capacidad Máxima:</label>
+              <input type="text" id="capacidadMaxima" name="capacidadMaxima" class="form-control" [(ngModel)]="insercion.capacidadMaxima" required>
+
+              <input type="submit" value="Registrarse" class="btn-primary">
+        </form>
+      </div>
+    </div>
+  </div>  
+  

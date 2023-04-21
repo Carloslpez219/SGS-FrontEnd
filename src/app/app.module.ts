@@ -18,6 +18,9 @@ import { UpdateMedicoComponent } from './pages/update-medico/update-medico.compo
 import { CreateIncidenciaComponent } from './pages/create-incidencia/create-incidencia.component';
 import { BitacoraCardComponent } from './bitacora-card/bitacora-card.component';
 import { BitacoraHistorialComponent } from './pages/bitacora-historial/bitacora-historial.component';
+import { InsertInventarioMedicamentoComponent } from './pages/insert-inventario-medicamento/insert-inventario-medicamento.component';
+import { InventarioMedicamentoComponent } from './pages/inventario-medicamento/inventario-medicamento.component';
+import { InsertInventarioMaterialesComponent } from './pages/insert-inventario-materiales/insert-inventario-materiales.component';
 
 
 @NgModule({
@@ -35,7 +38,10 @@ import { BitacoraHistorialComponent } from './pages/bitacora-historial/bitacora-
     HistorialMedicoComponent,
     CreateIncidenciaComponent,
     BitacoraCardComponent,
-    BitacoraHistorialComponent
+    BitacoraHistorialComponent,
+    InsertInventarioMedicamentoComponent,
+    InventarioMedicamentoComponent,
+    InsertInventarioMaterialesComponent
   ],
   imports: [
     BrowserModule,

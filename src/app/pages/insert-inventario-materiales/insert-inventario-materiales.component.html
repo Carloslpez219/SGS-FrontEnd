@@ -1,0 +1,26 @@
+<div class="fondo">
+    <h1 class="titulo">Insercion en Inventario de Materiales</h1>
+    <div class="container">
+      <div class="card">
+        <form #formulario="ngForm" (ngSubmit)="submitForm(formulario.value)">
+            <label for="centro_medico">Centro Médico:</label>
+            <div class="form-group">
+                <select class="form-control" id="centroMedico" name="centroMedico" [(ngModel)]="insercion.centroMedico" required>
+                  <option *ngFor="let centro of centrosMedicos" [value]="centro.id_centro_medico">{{centro.nombre}}</option>
+                </select>
+              </div>
+            <label for="material">Material:</label>
+            <div class="form-group">
+                <select class="form-control" id="material" name="material" [(ngModel)]="insercion.material" required>
+                  <option *ngFor="let mat of materiales" [value]="mat.id_material">{{mat.nombre_material}}</option>
+                </select>
+              </div>
+            
+              <label for="disponibilidad">Disponibilidad:</label>
+              <input type="text" id="disponibilidad" name="disponibilidad" class="form-control" [(ngModel)]="insercion.disponibilidad" required>
+
+              <input type="submit" value="Registrarse" class="btn-primary">
+        </form>
+      </div>
+    </div>
+  </div>  
