@@ -51,7 +51,7 @@ export class CreatePacienteComponent {
     };
     
     this.userService.createPaciente(params).subscribe((resp: any)=>{
-      alert(resp);
+      alert(resp.message);
       this.paciente = {
         cui: '',
         nombre: '',

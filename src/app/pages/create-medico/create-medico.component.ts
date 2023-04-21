@@ -59,7 +59,7 @@ export class CreateMedicoComponent {
     console.log(params);
     
     this.userService.createMedico(params).subscribe((resp: any)=>{
-      alert(resp);
+      alert(resp.message);
       this.medico = {
         cui: '',
         nombre: '',
