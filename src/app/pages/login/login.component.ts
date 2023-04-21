@@ -15,11 +15,11 @@ export class LoginComponent {
   constructor(private userService: UserService, private router: Router) { }
 
   navigateToRegister() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/updatePaciente']);
   }
 
   navigateToHome() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/createIncidencia']);
   }
 
   async login(){
@@ -31,7 +31,7 @@ export class LoginComponent {
     this.userService.login(params).subscribe(async (res: any)=>{
       if(res.message === undefined){
         alert('Bienvenido '+res[0].usuario);
-        this.navigateToRegister();
+        this.navigateToHome();
       }else{
         alert(res.message);
       }

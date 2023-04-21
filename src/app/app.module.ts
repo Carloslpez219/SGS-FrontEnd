@@ -14,6 +14,9 @@ import { HistorialMedicoComponent } from './pages/historial-medico/historial-med
 import { UpdatePacienteComponent } from './pages/update-paciente/update-paciente.component';
 import { DetalleIncidenciaComponent } from './pages/detalle-incidencia/detalle-incidencia.component';
 import { InfoCardComponent } from './info-card/info-card.component';
+import { UpdateMedicoComponent } from './pages/update-medico/update-medico.component';
+import { CreateIncidenciaComponent } from './pages/create-incidencia/create-incidencia.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { InfoCardComponent } from './info-card/info-card.component';
     UpdatePacienteComponent,
     HistorialMedicoComponent,
     DetalleIncidenciaComponent,
-    InfoCardComponent
+    InfoCardComponent,
+    UpdateMedicoComponent,
+    HistorialMedicoComponent,
+    CreateIncidenciaComponent
   ],
   imports: [
     BrowserModule,

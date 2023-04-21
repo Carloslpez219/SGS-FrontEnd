@@ -137,12 +137,56 @@ export class UserService {
     return this.http.post(this.url + '/getPaciente', body,{headers});
   }
 
+  getMedico(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/getMedico', body,{headers});
+  }
+
   getResumenExpediente(params: any){
     const headers = { 'content-type': 'application/json'};
     const body=JSON.stringify(params);
     console.log(body);
 
     return this.http.post(this.url + '/getResumenExpediente', body,{headers});
+  }
+
+  updatePaciente(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.put(this.url + '/updatePaciente', body,{headers});
+  }
+
+  updateMedico(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.put(this.url + '/updateMedico', body,{headers});
+  }
+
+  getPosiblesPadres(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/getPosiblesPadres', body,{headers});
+  }
+
+  getMedicos(){
+    return this.http.get(this.url + '/getMedicos');
+  }
+
+  createIncidencia(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/createIncidencia', body,{headers});
   }
 
 }

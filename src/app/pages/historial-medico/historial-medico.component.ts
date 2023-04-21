@@ -11,37 +11,11 @@ export class HistorialMedicoComponent implements OnInit {
   registros: any;
   cui: any;
   paciente: any;
-  paso1 = true;
+  validacion_usuario = true;
 
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
-    // Simulación de datos de registros del historial médico
-    this.registros = [
-      {
-        fechaConsulta: '2022-01-01',
-        horaConsulta: '10:00',
-        imc: 25,
-        altura: 170,
-        peso: 70,
-        medicoTratante: 'Dr. Juan Pérez',
-        especialidadMedico: 'Cardiología',
-        centroMedico: 'Hospital ABC',
-        evolucionResultado: 'Mejoría en los síntomas del paciente después del tratamiento.'
-      },
-      {
-        fechaConsulta: '2022-02-15',
-        horaConsulta: '15:30',
-        imc: 23,
-        altura: 160,
-        peso: 65,
-        medicoTratante: 'Dra. Ana Gómez',
-        especialidadMedico: 'Dermatología',
-        centroMedico: 'Clínica XYZ',
-        evolucionResultado: 'El paciente muestra signos de recuperación en la piel después del tratamiento.'
-      },
-      // Agregar más registros del historial médico aquí
-    ];
   }
 
   async getPaciente(){
@@ -50,8 +24,13 @@ export class HistorialMedicoComponent implements OnInit {
     };
 
     this.userService.getPaciente(params).subscribe(async (res: any)=>{
-      this.paciente = res;
-      this.getResumenExpediente();
+      if(res.message === undefined){
+        this.paciente = res[0];
+        console.log(this.paciente.cui);
+        this.getResumenExpediente();
+      }else{
+        alert(res.message);
+      }
     });
   }
 
@@ -61,8 +40,9 @@ export class HistorialMedicoComponent implements OnInit {
     };
 
     this.userService.getResumenExpediente(params).subscribe(async (res: any)=>{
+      console.log(res);
       this.registros = res;
-      this.paso1 = false;
+      this.validacion_usuario = false;
     });
   }
 

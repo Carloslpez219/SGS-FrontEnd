@@ -6,15 +6,15 @@
   </nav>
 
 
-  <h1 class="text-center mb-4" style="margin-top: 80px;" *ngIf="paso1">Buscar paciente</h1>
+  <h1 class="text-center mb-4" style="margin-top: 80px;" *ngIf="validacion_usuario">Buscar paciente</h1>
 
-  <div class="container" *ngIf="paso1">
+  <div class="container" *ngIf="validacion_usuario">
     <div class="row justify-content-center">
       <div class="col-md-6">
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="Buscar...">
+          <input type="text" class="form-control" placeholder="CUI..." [(ngModel)]="cui">
           <div class="input-group-append">
-            <button class="btn btn-primary" type="button">Buscar</button>
+            <button class="btn btn-primary" type="button" (click)="getPaciente()">Buscar</button>
           </div>
         </div>
       </div>
@@ -23,22 +23,24 @@
   
   
 
-<div class="container mt-4" *ngIf="!paso1">
+<div class="container mt-4" *ngIf="!validacion_usuario">
     <h1 class="text-center mb-4">Historial Médico</h1>
     <div class="row">
       <div class="col-md-4" *ngFor="let registro of registros" (click)="guardarIncidencia(registro)">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">{{registro.fechaConsulta}}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{registro.horaConsulta}}</h6>
-            <p class="card-text">IMC: {{registro.imc}}</p>
-            <p class="card-text">Altura: {{registro.altura}}</p>
-            <p class="card-text">Peso: {{registro.peso}}</p>
-            <p class="card-text">Médico Tratante: {{registro.medicoTratante}}</p>
-            <p class="card-text">Especialidad del Médico: {{registro.especialidadMedico}}</p>
-            <p class="card-text">Centro Médico: {{registro.centroMedico}}</p>
-            <p class="card-text">Evolución y Resultado del Tratamiento:</p>
-            <p class="card-text">{{registro.evolucionResultado}}</p>
+            <h5 class="card-title">{{registro.fecha_consulta}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{registro.hora_consulta}}</h6>
+            <p class="card-text"><b>IMC: </b>{{registro.imc}}</p>
+            <p class="card-text"><b>Altura: </b>{{registro.altura}}</p>
+            <p class="card-text"><b>Peso: </b>{{registro.peso}}</p>
+            <p class="card-text"><b>Médico tratante: </b>{{registro.medico_tratante}}</p>
+            <p class="card-text"><b>Especialidad del médico: </b>{{registro.especialidad_medico}}</p>
+            <p class="card-text"><b>Centro Médico: </b>{{registro.centro_medico_tratante}}</p>
+            <p class="card-text" *ngIf="registro.evolucion===null"><b>Evolución: </b>Sin registro</p>
+            <p class="card-text" *ngIf="registro.evolucion!==null"><b>Evolución: </b>{{registro.evolucion}}</p>
+            <p class="card-text" *ngIf="registro.resultado_tratamiento===null"><b>Resultado del Tratamiento: </b>Sin registro</p>
+            <p class="card-text" *ngIf="registro.resultado_tratamiento!==null"><b>Resultado del Tratamiento: </b>{{registro.resultado_tratamiento}}</p>
           </div>
         </div>
       </div>
