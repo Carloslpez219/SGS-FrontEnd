@@ -185,6 +185,10 @@ export class UserService {
     return this.http.get(this.url + '/getBitacoraHistorial');
   }
 
+  getBitacoraTraspaso(){
+    return this.http.get(this.url + '/getBitacoraTraspaso');
+  }
+
   getMateriales(){
     return this.http.get(this.url + '/getMateriales');
   }
