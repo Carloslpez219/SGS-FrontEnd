@@ -1,1 +1,20 @@
-<p>reporte-pacientes works!</p>
+<app-navbar></app-navbar>
+<div class="container">
+    <h1>Reporte de las unidades que mas pacientes atienden</h1>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card-deck">
+          <div class="card" *ngFor="let paciente of pacientes">
+            <div class="card-body">
+              <h5 class="card-title">Nombre del paciente: {{ paciente.nombre_paciente }}</h5>
+              <p class="card-text">Cantidad: {{ paciente.cantidad }}</p>
+              <p class="card-text">IMC reciente: {{ paciente.imc_reciente }}</p>
+              <p class="card-text">Peso reciente: {{ paciente.peso_reciente }}</p>
+              <p class="card-text">Altura reciente: {{ paciente.altura_reciente }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
