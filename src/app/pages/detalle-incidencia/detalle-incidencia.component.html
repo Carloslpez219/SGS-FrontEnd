@@ -1,0 +1,35 @@
+<nav class="navbar">
+    <ul class="nav-list">
+      <li class="nav-item"><a href="#">Inicio</a></li>
+      <li class="nav-item"><a href="#">Cerrar sesión</a></li>
+    </ul>
+  </nav>
+
+<div class="container">
+    <h1>Información</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Tratamientos</h2>
+        <app-info-card *ngFor="let tratamiento of tratamientos" [titulo]="tratamiento.nombre" [descripcion]="tratamiento.dosis"></app-info-card>
+      </div>
+      <div class="col-md-6">
+        <h2>Cirugías</h2>
+        <app-info-card *ngFor="let cirugia of cirugias" [titulo]="cirugia.nombre" [descripcion]="cirugia.descripcion"></app-info-card>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Adicciones</h2>
+        <app-info-card *ngFor="let adiccion of adicciones" [titulo]="adiccion.nombre" [descripcion]="adiccion.info"></app-info-card>
+      </div>
+      <div class="col-md-4">
+        <h2>Exámenes</h2>
+        <app-info-card *ngFor="let examen of examenes" [titulo]="examen.nombre" [descripcion]="examen.info"></app-info-card>
+      </div>
+      <div class="col-md-4">
+        <h2>Enfermedades</h2>
+        <app-info-card *ngFor="let enfermedad of enfermedades" [titulo]="enfermedad.nombre" [descripcion]="enfermedad.info"></app-info-card>
+      </div>
+    </div>
+  </div>
+  

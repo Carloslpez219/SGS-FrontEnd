@@ -66,4 +66,8 @@ export class HistorialMedicoComponent implements OnInit {
     });
   }
 
+  guardarIncidencia(registro: any){
+    sessionStorage.setItem('incidencia', registro.id_incidencia);
+  }
+
 }
