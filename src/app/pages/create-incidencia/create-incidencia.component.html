@@ -1,0 +1,38 @@
+<div class="fondo">
+    <h1 class="titulo">Registrar Incidencia</h1>
+    <div class="container" *ngIf="validacion_usuario">
+      <div class="card">
+        <form #formulario="ngForm" (ngSubmit)="submitForm(formulario.value)">
+          <label for="imc">IMC:</label>
+          <input type="text" id="imc" name="imc" class="form-control" [(ngModel)]="incidencia.imc" required>
+          <label for="altura">Altura:</label>
+          <input type="text" id="altura" name="altura" class="form-control" [(ngModel)]="incidencia.altura" required>
+          <label for="peso">Peso:</label>
+          <input type="text" id="peso" name="peso" class="form-control" [(ngModel)]="incidencia.peso" required>
+          <label for="medico">Médico:</label>
+          <div class="form-group">
+              <select class="form-control" id="medico" name="medico" [(ngModel)]="incidencia.noColegiado" required>
+                <option *ngFor="let med of medicos" [value]="med.no_colegiado">{{med.cui}} - {{med.nombre}} {{med.apellidos}}</option>
+              </select>
+            </div>
+          <label for="centro_medico">Centro Médico:</label>
+          <div class="form-group">
+              <select class="form-control" id="centroMedico" name="centroMedico" [(ngModel)]="incidencia.centroMedico" required>
+                <option *ngFor="let centro of centrosMedicos" [value]="centro.id_centro_medico">{{centro.nombre}}</option>
+              </select>
+            </div>
+          <input type="submit" value="Registrar" class="btn-primary">
+        </form>
+      </div>
+    </div>
+
+    <div class="container" *ngIf="!validacion_usuario">
+        <div class="card">
+          <form #formulario="ngForm" (ngSubmit)="submitForm_Request(formulario.value)">
+            <label for="cui">CUI de Paciente:</label>
+            <input type="text" id="cui" name="cui" class="form-control" [(ngModel)]="req.cui" required>
+            <input type="submit" value="Ingresar" class="btn-primary">
+          </form>
+        </div>
+    </div>
+  </div>  

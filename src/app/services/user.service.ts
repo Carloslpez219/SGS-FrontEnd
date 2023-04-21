@@ -129,4 +129,16 @@ export class UserService {
     return this.http.post(this.url + '/getPosiblesPadres', body,{headers});
   }
 
+  getMedicos(){
+    return this.http.get(this.url + '/getMedicos');
+  }
+
+  createIncidencia(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/createIncidencia', body,{headers});
+  }
+
 }
