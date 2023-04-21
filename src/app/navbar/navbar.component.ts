@@ -71,6 +71,17 @@ export class NavbarComponent {
     }
   }
 
+  onReporteSelect(event: Event) {
+    const value = (event.target as HTMLSelectElement).value;
+    switch (value) {
+      case 'verReporteTop10Enfermedades':
+        this.navigateToReporteMuertes();
+        break;
+      default:
+        break;
+    }
+  }
+
   navigateToHome() {
     this.router.navigate(['/home']);
   }
@@ -122,6 +133,10 @@ export class NavbarComponent {
 
   navigateToInsertInventarioMateriales() {
     this.router.navigate(['/insertInventarioMaterial']);
+  }
+
+  navigateToReporteMuertes() {
+    this.router.navigate(['/reporteMuertes']);
   }
 
 }

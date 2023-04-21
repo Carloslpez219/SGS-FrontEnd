@@ -20,6 +20,7 @@ import { InsertAdiccionComponent } from './pages/insert-adiccion/insert-adiccion
 import { InsertTratamientoComponent } from './pages/insert-tratamiento/insert-tratamiento.component';
 import { BitacoraHistorialComponent } from './pages/bitacora-historial/bitacora-historial.component';
 import { BitacoraTraspasoComponent } from './pages/bitacora-traspaso/bitacora-traspaso.component';
+import { ReporteMuertesComponent } from './pages/reporte-muertes/reporte-muertes.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -42,7 +43,8 @@ const routes: Routes = [
   { path: 'agregarAdiccion', component: InsertAdiccionComponent },
   { path: 'agregarTratamiento', component: InsertTratamientoComponent },
   { path: 'bitacoraHistorial', component: BitacoraHistorialComponent },
-  { path: 'bitacoraTraspaso', component: BitacoraTraspasoComponent }
+  { path: 'bitacoraTraspaso', component: BitacoraTraspasoComponent },
+  { path: 'reporteMuertes', component: ReporteMuertesComponent }
 ];
 
 @NgModule({
