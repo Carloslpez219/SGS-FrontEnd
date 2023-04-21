@@ -1,0 +1,23 @@
+<h1 class="text-center mb-4" style="margin-top: 80px;">Agregar Tratamiento</h1>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="input-group">
+        <label for="medicamento">Medicamento:</label>
+        <div class="form-group">
+            <select class="form-control" id="medicamento" name="medicamento" [(ngModel)]="medicamento" required>
+              <option *ngFor="let med of medicamentos" [value]="med.id_medicina">{{med.nombre_medicamento}}</option>
+            </select>
+        </div>
+
+        <label for="dosis">Dosis:</label>
+        <input type="text" id="dosis" name="dosis" class="form-control" [(ngModel)]="dosis" required>
+        
+          <div class="input-group-append">
+          <button class="btn btn-primary" type="button" (click)="insertTratamiento()">Agregar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

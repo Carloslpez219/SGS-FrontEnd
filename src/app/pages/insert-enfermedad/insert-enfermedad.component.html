@@ -1,0 +1,19 @@
+<h1 class="text-center mb-4" style="margin-top: 80px;">Agregar Enfermedad</h1>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="input-group">
+        <label for="enfermedad">Enfermedad:</label>
+        <div class="form-group">
+            <select class="form-control" id="enfermedad" name="enfermedad" [(ngModel)]="enfermedad" required>
+              <option *ngFor="let enf of enfermedades" [value]="enf.id_enfermedad">{{enf.nombre}}</option>
+            </select>
+          </div>
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button" (click)="insertEnfermedad()">Agregar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

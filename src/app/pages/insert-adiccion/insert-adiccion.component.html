@@ -1,0 +1,19 @@
+<h1 class="text-center mb-4" style="margin-top: 80px;">Agregar Adiccion</h1>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="input-group">
+        <label for="adiccion">Adiccion:</label>
+        <div class="form-group">
+            <select class="form-control" id="adiccion" name="adiccion" [(ngModel)]="adiccion" required>
+              <option *ngFor="let ad of adicciones" [value]="ad.id_adiccion">{{ad.nombre}}</option>
+            </select>
+          </div>
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button" (click)="insertAdiccion()">Agregar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
