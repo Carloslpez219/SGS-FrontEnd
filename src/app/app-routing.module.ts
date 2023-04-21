@@ -8,6 +8,10 @@ import { LoginComponent } from './pages/login/login.component';
 import { UpdatePacienteComponent } from './pages/update-paciente/update-paciente.component';
 import { UpdateMedicoComponent } from './pages/update-medico/update-medico.component';
 import { CreateIncidenciaComponent } from './pages/create-incidencia/create-incidencia.component';
+import { InsertInventarioMedicamentoComponent } from './pages/insert-inventario-medicamento/insert-inventario-medicamento.component';
+import { InventarioMedicamentoComponent } from './pages/inventario-medicamento/inventario-medicamento.component';
+import { InsertInventarioMaterialesComponent } from './pages/insert-inventario-materiales/insert-inventario-materiales.component';
+import { DetalleIncidenciaComponent } from './pages/detalle-incidencia/detalle-incidencia.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -18,7 +22,11 @@ const routes: Routes = [
   { path: 'updatePaciente', component: UpdatePacienteComponent },
   { path: 'updateMedico', component: UpdateMedicoComponent },
   { path: 'historial-medico', component: HistorialMedicoComponent },
-  { path: 'createIncidencia', component: CreateIncidenciaComponent }
+  { path: 'createIncidencia', component: CreateIncidenciaComponent },
+  { path: 'insertInventarioMedicamento', component: InsertInventarioMedicamentoComponent },
+  { path: 'inventarioMedicamento', component: InventarioMedicamentoComponent },
+  { path: 'insertInventarioMaterial', component: InsertInventarioMaterialesComponent },
+  { path: 'detalleIncidencia', component: DetalleIncidenciaComponent }
 ];
 
 @NgModule({
