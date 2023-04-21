@@ -7,6 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { UpdatePacienteComponent } from './pages/update-paciente/update-paciente.component';
 import { UpdateMedicoComponent } from './pages/update-medico/update-medico.component';
+import { CreateIncidenciaComponent } from './pages/create-incidencia/create-incidencia.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'updatePaciente', component: UpdatePacienteComponent },
   { path: 'updateMedico', component: UpdateMedicoComponent },
   { path: 'historial-medico', component: HistorialMedicoComponent },
+  { path: 'createIncidencia', component: CreateIncidenciaComponent }
 ];
 
 @NgModule({

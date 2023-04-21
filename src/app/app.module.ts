@@ -13,6 +13,7 @@ import { CreateMedicoComponent } from './pages/create-medico/create-medico.compo
 import { HistorialMedicoComponent } from './pages/historial-medico/historial-medico.component';
 import { UpdatePacienteComponent } from './pages/update-paciente/update-paciente.component';
 import { UpdateMedicoComponent } from './pages/update-medico/update-medico.component';
+import { CreateIncidenciaComponent } from './pages/create-incidencia/create-incidencia.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { UpdateMedicoComponent } from './pages/update-medico/update-medico.compo
     CreateMedicoComponent,
     UpdatePacienteComponent,
     UpdateMedicoComponent,
-    HistorialMedicoComponent
+    HistorialMedicoComponent,
+    CreateIncidenciaComponent
   ],
   imports: [
     BrowserModule,
