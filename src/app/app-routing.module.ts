@@ -11,6 +11,7 @@ import { CreateIncidenciaComponent } from './pages/create-incidencia/create-inci
 import { InsertInventarioMedicamentoComponent } from './pages/insert-inventario-medicamento/insert-inventario-medicamento.component';
 import { InventarioMedicamentoComponent } from './pages/inventario-medicamento/inventario-medicamento.component';
 import { InsertInventarioMaterialesComponent } from './pages/insert-inventario-materiales/insert-inventario-materiales.component';
+import { DetalleIncidenciaComponent } from './pages/detalle-incidencia/detalle-incidencia.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -24,7 +25,8 @@ const routes: Routes = [
   { path: 'createIncidencia', component: CreateIncidenciaComponent },
   { path: 'insertInventarioMedicamento', component: InsertInventarioMedicamentoComponent },
   { path: 'inventarioMedicamento', component: InventarioMedicamentoComponent },
-  { path: 'insertInventarioMaterial', component: InsertInventarioMaterialesComponent }
+  { path: 'insertInventarioMaterial', component: InsertInventarioMaterialesComponent },
+  { path: 'detalleIncidencia', component: DetalleIncidenciaComponent }
 ];
 
 @NgModule({

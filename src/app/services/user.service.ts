@@ -121,14 +121,6 @@ export class UserService {
     return this.http.post(this.url + '/getTratamientoIncidencia', body,{headers});
   }
 
-  updatePaciente(params: any){
-    const headers = { 'content-type': 'application/json'};
-    const body=JSON.stringify(params);
-    console.log(body);
-
-    return this.http.post(this.url + '/updatePaciente', body,{headers});
-  }
-
   getPaciente(params: any){
     const headers = { 'content-type': 'application/json'};
     const body=JSON.stringify(params);
