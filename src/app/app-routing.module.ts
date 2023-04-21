@@ -18,6 +18,8 @@ import { InsertExamenComponent } from './pages/insert-examen/insert-examen.compo
 import { InsertCirugiaComponent } from './pages/insert-cirugia/insert-cirugia.component';
 import { InsertAdiccionComponent } from './pages/insert-adiccion/insert-adiccion.component';
 import { InsertTratamientoComponent } from './pages/insert-tratamiento/insert-tratamiento.component';
+import { BitacoraHistorialComponent } from './pages/bitacora-historial/bitacora-historial.component';
+import { BitacoraTraspasoComponent } from './pages/bitacora-traspaso/bitacora-traspaso.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -38,7 +40,9 @@ const routes: Routes = [
   { path: 'agregarExamen', component: InsertExamenComponent },
   { path: 'agregarCirugia', component: InsertCirugiaComponent },
   { path: 'agregarAdiccion', component: InsertAdiccionComponent },
-  { path: 'agregarTratamiento', component: InsertTratamientoComponent }
+  { path: 'agregarTratamiento', component: InsertTratamientoComponent },
+  { path: 'bitacoraHistorial', component: BitacoraHistorialComponent },
+  { path: 'bitacoraTraspaso', component: BitacoraTraspasoComponent }
 ];
 
 @NgModule({
