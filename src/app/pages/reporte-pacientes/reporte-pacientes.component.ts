@@ -10,11 +10,26 @@ export class ReportePacientesComponent {
 
   pacientes: any;
 
-  constructor(private userService: UserService){
+  centroMedico:any;
+  centrosMedicos:any;
 
-    this.userService.getTop5Pacientes().subscribe(async (res: any)=>{
-      this.pacientes = res;
-    });
-  }
+  validacion_usuario = true;
 
+    constructor(private userService: UserService) {
+      this.userService.getCentrosMedicos().subscribe((resp)=>{
+        this.centrosMedicos = resp;
+      });
+    }
+  
+    async getReporte(){
+      const params = {
+        id_centro_medico: this.centroMedico
+      };
+  
+      this.userService.getTop5Pacientes(params).subscribe(async (res: any)=>{
+        console.log(res);
+        this.pacientes = res;
+        this.validacion_usuario = false;
+      });
+    }
 }

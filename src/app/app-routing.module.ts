@@ -24,6 +24,7 @@ import { ReporteMuertesComponent } from './pages/reporte-muertes/reporte-muertes
 import { ReporteMedicosComponent } from './pages/reporte-medicos/reporte-medicos.component';
 import { ReportePacientesComponent } from './pages/reporte-pacientes/reporte-pacientes.component';
 import { ReporteUnidadesComponent } from './pages/reporte-unidades/reporte-unidades.component';
+import { ReporteMedicamentoComponent } from './pages/reporte-medicamento/reporte-medicamento.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -50,7 +51,8 @@ const routes: Routes = [
   { path: 'reporteMuertes', component: ReporteMuertesComponent },
   { path: 'reporteMedicos', component: ReporteMedicosComponent },
   { path: 'reportePacientes', component: ReportePacientesComponent },
-  { path: 'reporteUnidades', component: ReporteUnidadesComponent }
+  { path: 'reporteUnidades', component: ReporteUnidadesComponent },
+  { path: 'reporteMedicamento', component: ReporteMedicamentoComponent }
 ];
 
 @NgModule({
