@@ -20,32 +20,14 @@
 
 
 <div class="container mt-4" *ngIf="!validacion_usuario">
-  <h1 class="text-center mb-4">Inventario Medicamentos</h1>
+  <h1 class="text-center mb-4">Inventario Materiales</h1>
   <div class="row">
     <div class="col-md-4" *ngFor="let registro of registros">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">{{registro.descripcion}}</h5>
           <h6 class="card-subtitle mb-2 text-muted"><b>Disponibilidad: </b>{{registro.disponibilidad}}</h6>
-          <p class="card-text"><b>Fecha de Caducidad: </b>{{registro.fecha_caducidad}}</p>
-          <p class="card-text"><b>Capacidad máxima: </b>{{registro.capacidad_maxima}}</p>
         </div>
       </div>
     </div>
   </div>
-
-  <h1 class="text-center mb-4">Alerta</h1>
-  <h3 class="text-center mb-4">Medicamentos que estan por agotarse y/o por vencer</h3>
-  <div class="row">
-    <div class="col-md-4" *ngFor="let medicina of medicinas">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">{{medicina.descripcion}}</h5>
-          <h6 class="card-subtitle mb-2 text-muted"><b>Disponibilidad: </b>{{medicina.disponibilidad}}</h6>
-          <p class="card-text"><b>Fecha de Caducidad: </b>{{medicina.fecha_caducidad}}</p>
-          <p class="card-text"><b>Capacidad máxima: </b>{{medicina.capacidad_maxima}}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>

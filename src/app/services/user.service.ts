@@ -209,4 +209,24 @@ export class UserService {
     return this.http.post(this.url + '/getMedicinasPorAgotarse', body,{headers});
   }
 
+  getMateriales(){
+    return this.http.get(this.url + '/getMateriales');
+  }
+
+  insertMaterial(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/insertMaterial', body,{headers});
+  }
+
+  getInventarioMateriales(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/getInventarioMateriales', body,{headers});
+  }
+
 }

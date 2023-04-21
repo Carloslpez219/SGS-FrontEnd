@@ -19,6 +19,7 @@ import { CreateIncidenciaComponent } from './pages/create-incidencia/create-inci
 import { InsertInventarioMedicamentoComponent } from './pages/insert-inventario-medicamento/insert-inventario-medicamento.component';
 import { InventarioMedicamentoComponent } from './pages/inventario-medicamento/inventario-medicamento.component';
 import { InsertInventarioMaterialesComponent } from './pages/insert-inventario-materiales/insert-inventario-materiales.component';
+import { InventarioMaterialesComponent } from './pages/inventario-materiales/inventario-materiales.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { InsertInventarioMaterialesComponent } from './pages/insert-inventario-m
     CreateIncidenciaComponent,
     InsertInventarioMedicamentoComponent,
     InventarioMedicamentoComponent,
-    InsertInventarioMaterialesComponent
+    InsertInventarioMaterialesComponent,
+    InventarioMaterialesComponent
   ],
   imports: [
     BrowserModule,

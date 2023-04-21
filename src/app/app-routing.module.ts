@@ -12,6 +12,7 @@ import { InsertInventarioMedicamentoComponent } from './pages/insert-inventario-
 import { InventarioMedicamentoComponent } from './pages/inventario-medicamento/inventario-medicamento.component';
 import { InsertInventarioMaterialesComponent } from './pages/insert-inventario-materiales/insert-inventario-materiales.component';
 import { DetalleIncidenciaComponent } from './pages/detalle-incidencia/detalle-incidencia.component';
+import { InventarioMaterialesComponent } from './pages/inventario-materiales/inventario-materiales.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -26,7 +27,8 @@ const routes: Routes = [
   { path: 'insertInventarioMedicamento', component: InsertInventarioMedicamentoComponent },
   { path: 'inventarioMedicamento', component: InventarioMedicamentoComponent },
   { path: 'insertInventarioMaterial', component: InsertInventarioMaterialesComponent },
-  { path: 'detalleIncidencia', component: DetalleIncidenciaComponent }
+  { path: 'detalleIncidencia', component: DetalleIncidenciaComponent },
+  { path: 'inventarioMateriales', component: InventarioMaterialesComponent }
 ];
 
 @NgModule({

@@ -19,7 +19,7 @@ export class LoginComponent {
   }
 
   navigateToHome() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/inventarioMateriales']);
   }
 
   async login(){
