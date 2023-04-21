@@ -26,4 +26,40 @@ export class NavbarComponent {
     this.router.navigate(['/bitacoraTraspaso']);
   }
 
+  navigateToCreateIncidencia() {
+    this.router.navigate(['/createIncidencia']);
+  }
+
+  navigateToCreateMedico() {
+    this.router.navigate(['/createMedico']);
+  }
+
+  navigateToCreatePaciente() {
+    this.router.navigate(['/createPaciente']);
+  }
+
+  navigateToUpdateMedico() {
+    this.router.navigate(['/updateMedico']);
+  }
+
+  navigateToUpdatePaciente() {
+    this.router.navigate(['/updatePaciente']);
+  }
+
+  navigateToInventarioMedicamento() {
+    this.router.navigate(['/inventarioMedicamento']);
+  }
+
+  navigateToInventarioMateriales() {
+    this.router.navigate(['/inventarioMateriales']);
+  }
+
+  navigateToInsertInventarioMedicamento() {
+    this.router.navigate(['/insertInventarioMedicamento']);
+  }
+
+  navigateToInsertInventarioMateriales() {
+    this.router.navigate(['/insertInventarioMaterial']);
+  }
+
 }

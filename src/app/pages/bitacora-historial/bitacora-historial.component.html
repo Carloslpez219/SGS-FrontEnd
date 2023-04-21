@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-md-12">
         <div *ngFor="let bitacora of bitacoras">
-          <app-bitacora-card [id]="bitacora.id_bit" [incidencia]="bitacora.id_inc" [fechaHora]="fecha_hora" [accion]="bitacora.descripcion" [usuario]="bitacora.userio"></app-bitacora-card>
+          <app-bitacora-card [id]="bitacora.id_bit" [incidencia]="bitacora.id_inc" [fechaHora]="bitacora.fecha_h" [accion]="bitacora.descripcion" [usuario]="bitacora.userio"></app-bitacora-card>
         </div>
       </div>
     </div>
