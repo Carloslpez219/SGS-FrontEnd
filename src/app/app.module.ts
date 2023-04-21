@@ -29,6 +29,7 @@ import { InsertExamenComponent } from './pages/insert-examen/insert-examen.compo
 import { InsertCirugiaComponent } from './pages/insert-cirugia/insert-cirugia.component';
 import { InsertAdiccionComponent } from './pages/insert-adiccion/insert-adiccion.component';
 import { InsertTratamientoComponent } from './pages/insert-tratamiento/insert-tratamiento.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { InsertTratamientoComponent } from './pages/insert-tratamiento/insert-tr
     InsertExamenComponent,
     InsertCirugiaComponent,
     InsertAdiccionComponent,
-    InsertTratamientoComponent
+    InsertTratamientoComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
