@@ -34,6 +34,7 @@ import { ReporteMuertesComponent } from './pages/reporte-muertes/reporte-muertes
 import { ReporteMedicosComponent } from './pages/reporte-medicos/reporte-medicos.component';
 import { ReportePacientesComponent } from './pages/reporte-pacientes/reporte-pacientes.component';
 import { ReporteUnidadesComponent } from './pages/reporte-unidades/reporte-unidades.component';
+import { ReporteMedicamentoComponent } from './pages/reporte-medicamento/reporte-medicamento.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { ReporteUnidadesComponent } from './pages/reporte-unidades/reporte-unida
     ReporteMuertesComponent,
     ReporteMedicosComponent,
     ReportePacientesComponent,
-    ReporteUnidadesComponent
+    ReporteUnidadesComponent,
+    ReporteMedicamentoComponent
   ],
   imports: [
     BrowserModule,

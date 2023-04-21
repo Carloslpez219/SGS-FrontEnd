@@ -301,9 +301,14 @@ export class UserService {
     return this.http.get(this.url + '/getTop10Medicos');
   }
 
-  getTop5Pacientes(){
-    return this.http.get(this.url + '/getTop5Pacientes');
+  getTop5Pacientes(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/getTop5Pacientes', body,{headers});
   }
+
 
   getTop3Unidades(){
     return this.http.get(this.url + '/getTop3Unidades');

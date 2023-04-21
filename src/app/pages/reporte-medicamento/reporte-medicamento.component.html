@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+<h1 class="text-center mb-4" style="margin-top: 80px;" *ngIf="validacion_usuario">Reporte Medicamento</h1>
+
+<div class="container" *ngIf="validacion_usuario">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="input-group">
+        <label for="centroMedico">Centro Médico:</label>
+        <div class="form-group">
+            <select class="form-control" id="centroMedico" name="centroMedico" [(ngModel)]="centroMedico" required>
+              <option *ngFor="let centro of centrosMedicos" [value]="centro.id_centro_medico">{{centro.nombre}}</option>
+            </select>
+          </div>
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button" (click)="getReporte()">Buscar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container mt-4" *ngIf="!validacion_usuario">
+  <h1 class="text-center mb-4">Medicamento a Punto de Terminarse y/o Vencer</h1>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let medicina of medicinas">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{medicina.descripcion}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted"><b>Disponibilidad: </b>{{medicina.disponibilidad}}</h6>
+          <p class="card-text"><b>Fecha de Caducidad: </b>{{medicina.fecha_caducidad}}</p>
+          <p class="card-text"><b>Capacidad máxima: </b>{{medicina.capacidad_maxima}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

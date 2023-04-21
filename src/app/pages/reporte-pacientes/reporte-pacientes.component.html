@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
-<div class="container">
-    <h1>Reporte de las unidades que mas pacientes atienden</h1>
+<div class="container" *ngIf="!validacion_usuario">
+    <h1>Reporte de Pacientes con más asistencias</h1>
     <div class="row">
       <div class="col-md-12">
         <div class="card-deck">
@@ -18,3 +18,22 @@
     </div>
   </div>
   
+  <h1 class="text-center mb-4" style="margin-top: 80px;" *ngIf="validacion_usuario">Generar Reporte</h1>
+
+<div class="container" *ngIf="validacion_usuario">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="input-group">
+        <label for="centroMedico">Centro Médico:</label>
+        <div class="form-group">
+            <select class="form-control" id="centroMedico" name="centroMedico" [(ngModel)]="centroMedico" required>
+              <option *ngFor="let centro of centrosMedicos" [value]="centro.id_centro_medico">{{centro.nombre}}</option>
+            </select>
+          </div>
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button" (click)="getReporte()">Buscar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
