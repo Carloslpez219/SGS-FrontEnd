@@ -13,11 +13,7 @@ export class LoginComponent {
   pass = '';
 
   constructor(private userService: UserService, private router: Router) { }
-
-  navigateToRegister() {
-    this.router.navigate(['/updatePaciente']);
-  }
-
+  
   navigateToHome() {
     this.router.navigate(['/home']);
   }
