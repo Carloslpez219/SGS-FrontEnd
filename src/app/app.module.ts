@@ -12,11 +12,14 @@ import { CreatePacienteComponent } from './pages/create-paciente/create-paciente
 import { CreateMedicoComponent } from './pages/create-medico/create-medico.component';
 import { HistorialMedicoComponent } from './pages/historial-medico/historial-medico.component';
 import { UpdatePacienteComponent } from './pages/update-paciente/update-paciente.component';
+import { DetalleIncidenciaComponent } from './pages/detalle-incidencia/detalle-incidencia.component';
+import { InfoCardComponent } from './info-card/info-card.component';
 import { UpdateMedicoComponent } from './pages/update-medico/update-medico.component';
 import { CreateIncidenciaComponent } from './pages/create-incidencia/create-incidencia.component';
 import { InsertInventarioMedicamentoComponent } from './pages/insert-inventario-medicamento/insert-inventario-medicamento.component';
 import { InventarioMedicamentoComponent } from './pages/inventario-medicamento/inventario-medicamento.component';
 import { InsertInventarioMaterialesComponent } from './pages/insert-inventario-materiales/insert-inventario-materiales.component';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +29,9 @@ import { InsertInventarioMaterialesComponent } from './pages/insert-inventario-m
     CreatePacienteComponent,
     CreateMedicoComponent,
     UpdatePacienteComponent,
+    HistorialMedicoComponent,
+    DetalleIncidenciaComponent,
+    InfoCardComponent,
     UpdateMedicoComponent,
     HistorialMedicoComponent,
     CreateIncidenciaComponent,

@@ -81,6 +81,54 @@ export class UserService {
     return this.http.get(this.url + '/getEstados');
   }
 
+  getEnfermedadesIncidencia(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/getEnfermedadesIncidencia', body,{headers});
+  }
+
+  getExamenesIncidencia(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/getExamenesIncidencia', body,{headers});
+  }
+
+  getCirugiasIncidencia(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/getCirugiasIncidencia', body,{headers});
+  }
+
+  getAdiccionesIncidencia(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/getAdiccionesIncidencia', body,{headers});
+  }
+
+  getTratamientoIncidencia(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/getTratamientoIncidencia', body,{headers});
+  }
+
+  updatePaciente(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/updatePaciente', body,{headers});
+  }
+
   getPaciente(params: any){
     const headers = { 'content-type': 'application/json'};
     const body=JSON.stringify(params);
