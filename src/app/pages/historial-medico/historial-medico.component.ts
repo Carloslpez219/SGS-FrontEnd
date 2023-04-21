@@ -51,4 +51,29 @@ export class HistorialMedicoComponent implements OnInit {
     this.router.navigate(['/detalleIncidencia']);
   }
 
+  agregarEnfermedad(registro: any){
+    sessionStorage.setItem('incidencia', registro.id_incidencia);
+    this.router.navigate(['/agregarEnfermedad']);
+  }
+
+  agregarExamen(registro: any){
+    sessionStorage.setItem('incidencia', registro.id_incidencia);
+    this.router.navigate(['/agregarExamen']);
+  }
+
+  agregarCirugia(registro: any){
+    sessionStorage.setItem('incidencia', registro.id_incidencia);
+    this.router.navigate(['/agregarCirugia']);
+  }
+
+  agregarAdiccion(registro: any){
+    sessionStorage.setItem('incidencia', registro.id_incidencia);
+    this.router.navigate(['/agregarAdiccion']);
+  }
+
+  agregarTratamiento(registro: any){
+    sessionStorage.setItem('incidencia', registro.id_incidencia);
+    this.router.navigate(['/agregarTratamiento']);
+  }
+
 }

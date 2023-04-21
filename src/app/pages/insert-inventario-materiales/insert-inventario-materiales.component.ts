@@ -18,7 +18,7 @@ export class InsertInventarioMaterialesComponent {
   materiales: any;
 
   constructor(private userService: UserService) { 
-    this.userService.getMedicamentos().subscribe((resp)=>{
+    this.userService.getMateriales().subscribe((resp)=>{
       this.materiales = resp;
     });
     this.userService.getCentrosMedicos().subscribe((resp)=>{
@@ -35,7 +35,7 @@ export class InsertInventarioMaterialesComponent {
 
     console.log(params);
     
-    this.userService.insertMedicamento(params).subscribe((resp: any)=>{
+    this.userService.insertMaterial(params).subscribe((resp: any)=>{
       alert(resp.message)
       this.insercion = {
         centroMedico: '',

@@ -26,7 +26,7 @@
 <div class="container mt-4" *ngIf="!validacion_usuario">
     <h1 class="text-center mb-4">Historial Médico</h1>
     <div class="row">
-      <div class="col-md-4" *ngFor="let registro of registros" (click)="guardarIncidencia(registro)">
+      <div class="col-md-4" *ngFor="let registro of registros">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">{{registro.fecha_consulta}}</h5>
@@ -41,6 +41,12 @@
             <p class="card-text" *ngIf="registro.evolucion!==null"><b>Evolución: </b>{{registro.evolucion}}</p>
             <p class="card-text" *ngIf="registro.resultado_tratamiento===null"><b>Resultado del Tratamiento: </b>Sin registro</p>
             <p class="card-text" *ngIf="registro.resultado_tratamiento!==null"><b>Resultado del Tratamiento: </b>{{registro.resultado_tratamiento}}</p>
+            <button class="btn btn-primary" type="button" (click)="guardarIncidencia(registro)">Ver detalle</button>
+            <button class="btn btn-primary" type="button" (click)="agregarTratamiento(registro)">Agregar Tratamiento</button>
+            <button class="btn btn-primary" type="button" (click)="agregarCirugia(registro)">Agregar Cirugia</button>
+            <button class="btn btn-primary" type="button" (click)="agregarAdiccion(registro)">Agregar Adiccion</button>
+            <button class="btn btn-primary" type="button" (click)="agregarExamen(registro)">Agregar Examen</button>
+            <button class="btn btn-primary" type="button" (click)="agregarEnfermedad(registro)">Agregar Enfermedad</button>
           </div>
         </div>
       </div>

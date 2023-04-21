@@ -1,0 +1,19 @@
+<h1 class="text-center mb-4" style="margin-top: 80px;">Agregar Examen</h1>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="input-group">
+        <label for="examen">Examen:</label>
+        <div class="form-group">
+            <select class="form-control" id="examen" name="examen" [(ngModel)]="examen" required>
+              <option *ngFor="let ex of examenes" [value]="ex.id_examen">{{ex.nombre}}</option>
+            </select>
+          </div>
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button" (click)="insertExamen()">Agregar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

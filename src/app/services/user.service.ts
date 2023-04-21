@@ -189,4 +189,108 @@ export class UserService {
     return this.http.get(this.url + '/getBitacoraTraspaso');
   }
 
+  getMateriales(){
+    return this.http.get(this.url + '/getMateriales');
+  }
+
+  getMedicamentos(){
+    return this.http.get(this.url + '/getMedicamentos');
+  }
+
+  insertMaterial(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/insertMaterial', body,{headers});
+  }
+
+  insertMedicamento(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/insertMedicamento', body,{headers});
+  }
+
+  getInventarioMateriales(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/getInventarioMateriales', body,{headers});
+  }
+
+  getInventarioMedicamentos(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/getInventarioMedicamentos', body,{headers});
+  }
+
+  getMedicinasPorAgotarse(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/getMedicinasPorAgotarse', body,{headers});
+  }
+
+  getEnfermedades(){
+    return this.http.get(this.url + '/getEnfermedades');
+  }
+
+  createHistorial_Enfermedad(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/createHistorial_Enfermedad', body,{headers});
+  }
+
+  getExamenes(){
+    return this.http.get(this.url + '/getExamenes');
+  }
+
+  createHistorial_Examen(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/createHistorial_Examen', body,{headers});
+  }
+
+  getCirugias(){
+    return this.http.get(this.url + '/getCirugias');
+  }
+
+  createHistorial_Cirugia(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/createHistorial_Cirugia', body,{headers});
+  }
+
+  getAdicciones(){
+    return this.http.get(this.url + '/getAdicciones');
+  }
+
+  createHistorial_Adiccion(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/createHistorial_Adiccion', body,{headers});
+  }
+
+  createHistorial_Tratamiento(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/createHistorial_Tratamiento', body,{headers});
+  }
+
 }

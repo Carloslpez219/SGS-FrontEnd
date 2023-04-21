@@ -23,7 +23,12 @@ import { InventarioMedicamentoComponent } from './pages/inventario-medicamento/i
 import { InsertInventarioMaterialesComponent } from './pages/insert-inventario-materiales/insert-inventario-materiales.component';
 import { BitacoraTraspasoComponent } from './pages/bitacora-traspaso/bitacora-traspaso.component';
 import { BitacoraTraspasosCardComponent } from './bitacora-traspasos-card/bitacora-traspasos-card.component';
-
+import { InventarioMaterialesComponent } from './pages/inventario-materiales/inventario-materiales.component';
+import { InsertEnfermedadComponent } from './pages/insert-enfermedad/insert-enfermedad.component';
+import { InsertExamenComponent } from './pages/insert-examen/insert-examen.component';
+import { InsertCirugiaComponent } from './pages/insert-cirugia/insert-cirugia.component';
+import { InsertAdiccionComponent } from './pages/insert-adiccion/insert-adiccion.component';
+import { InsertTratamientoComponent } from './pages/insert-tratamiento/insert-tratamiento.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +50,13 @@ import { BitacoraTraspasosCardComponent } from './bitacora-traspasos-card/bitaco
     InventarioMedicamentoComponent,
     InsertInventarioMaterialesComponent,
     BitacoraTraspasoComponent,
-    BitacoraTraspasosCardComponent
+    BitacoraTraspasosCardComponent,
+    InventarioMaterialesComponent,
+    InsertEnfermedadComponent,
+    InsertExamenComponent,
+    InsertCirugiaComponent,
+    InsertAdiccionComponent,
+    InsertTratamientoComponent
   ],
   imports: [
     BrowserModule,
