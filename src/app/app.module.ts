@@ -21,6 +21,8 @@ import { BitacoraHistorialComponent } from './pages/bitacora-historial/bitacora-
 import { InsertInventarioMedicamentoComponent } from './pages/insert-inventario-medicamento/insert-inventario-medicamento.component';
 import { InventarioMedicamentoComponent } from './pages/inventario-medicamento/inventario-medicamento.component';
 import { InsertInventarioMaterialesComponent } from './pages/insert-inventario-materiales/insert-inventario-materiales.component';
+import { BitacoraTraspasoComponent } from './pages/bitacora-traspaso/bitacora-traspaso.component';
+import { BitacoraTraspasosCardComponent } from './bitacora-traspasos-card/bitacora-traspasos-card.component';
 
 
 @NgModule({
@@ -41,7 +43,9 @@ import { InsertInventarioMaterialesComponent } from './pages/insert-inventario-m
     BitacoraHistorialComponent,
     InsertInventarioMedicamentoComponent,
     InventarioMedicamentoComponent,
-    InsertInventarioMaterialesComponent
+    InsertInventarioMaterialesComponent,
+    BitacoraTraspasoComponent,
+    BitacoraTraspasosCardComponent
   ],
   imports: [
     BrowserModule,
