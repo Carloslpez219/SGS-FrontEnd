@@ -14,6 +14,9 @@ import { HistorialMedicoComponent } from './pages/historial-medico/historial-med
 import { UpdatePacienteComponent } from './pages/update-paciente/update-paciente.component';
 import { UpdateMedicoComponent } from './pages/update-medico/update-medico.component';
 import { CreateIncidenciaComponent } from './pages/create-incidencia/create-incidencia.component';
+import { InsertInventarioMedicamentoComponent } from './pages/insert-inventario-medicamento/insert-inventario-medicamento.component';
+import { InventarioMedicamentoComponent } from './pages/inventario-medicamento/inventario-medicamento.component';
+import { InsertInventarioMaterialesComponent } from './pages/insert-inventario-materiales/insert-inventario-materiales.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { CreateIncidenciaComponent } from './pages/create-incidencia/create-inci
     UpdatePacienteComponent,
     UpdateMedicoComponent,
     HistorialMedicoComponent,
-    CreateIncidenciaComponent
+    CreateIncidenciaComponent,
+    InsertInventarioMedicamentoComponent,
+    InventarioMedicamentoComponent,
+    InsertInventarioMaterialesComponent
   ],
   imports: [
     BrowserModule,

@@ -51,7 +51,18 @@ export class CreatePacienteComponent {
     };
     
     this.userService.createPaciente(params).subscribe((resp: any)=>{
-      console.log(resp);
+      alert(resp);
+      this.paciente = {
+        cui: '',
+        nombre: '',
+        apellidos: '',
+        departamento: '',
+        municipio: '',
+        direccion: '',
+        telefono: '',
+        centroMedico: '',
+        estado: ''
+      };
     });
   }
 

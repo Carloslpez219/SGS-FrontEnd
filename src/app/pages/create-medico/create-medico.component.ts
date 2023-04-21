@@ -59,7 +59,21 @@ export class CreateMedicoComponent {
     console.log(params);
     
     this.userService.createMedico(params).subscribe((resp: any)=>{
-      console.log(resp);
+      alert(resp);
+      this.medico = {
+        cui: '',
+        nombre: '',
+        apellidos: '',
+        departamento: '',
+        municipio: '',
+        direccion: '',
+        telefono: '',
+        centroMedico: '',
+        no_colegiado: '',
+        especialidad: '',
+        usuario: '',
+        clave: ''
+      };
     });
   }
 

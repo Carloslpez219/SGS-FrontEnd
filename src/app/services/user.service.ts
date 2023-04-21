@@ -141,4 +141,32 @@ export class UserService {
     return this.http.post(this.url + '/createIncidencia', body,{headers});
   }
 
+  getMedicamentos(){
+    return this.http.get(this.url + '/getMedicamentos');
+  }
+
+  insertMedicamento(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/insertMedicamento', body,{headers});
+  }
+
+  getInventarioMedicamentos(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/getInventarioMedicamentos', body,{headers});
+  }
+
+  getMedicinasPorAgotarse(params: any){
+    const headers = { 'content-type': 'application/json'};
+    const body=JSON.stringify(params);
+    console.log(body);
+
+    return this.http.post(this.url + '/getMedicinasPorAgotarse', body,{headers});
+  }
+
 }

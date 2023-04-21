@@ -26,7 +26,6 @@ export class HistorialMedicoComponent implements OnInit {
     this.userService.getPaciente(params).subscribe(async (res: any)=>{
       if(res.message === undefined){
         this.paciente = res[0];
-        console.log(this.paciente.cui);
         this.getResumenExpediente();
       }else{
         alert(res.message);
