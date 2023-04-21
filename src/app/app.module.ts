@@ -30,6 +30,7 @@ import { InsertCirugiaComponent } from './pages/insert-cirugia/insert-cirugia.co
 import { InsertAdiccionComponent } from './pages/insert-adiccion/insert-adiccion.component';
 import { InsertTratamientoComponent } from './pages/insert-tratamiento/insert-tratamiento.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ReporteMuertesComponent } from './pages/reporte-muertes/reporte-muertes.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     InsertCirugiaComponent,
     InsertAdiccionComponent,
     InsertTratamientoComponent,
-    NavbarComponent
+    NavbarComponent,
+    ReporteMuertesComponent
   ],
   imports: [
     BrowserModule,

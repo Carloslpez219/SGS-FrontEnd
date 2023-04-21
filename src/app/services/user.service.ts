@@ -293,4 +293,8 @@ export class UserService {
     return this.http.post(this.url + '/createHistorial_Tratamiento', body,{headers});
   }
 
+  getTop10Enfermedades(){
+    return this.http.get(this.url + '/getTop10Enfermedades');
+  }
+
 }
